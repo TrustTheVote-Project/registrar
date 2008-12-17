@@ -1,0 +1,31 @@
+<h1>
+  Activity
+</h1>
+
+<table cellpadding="5" border="1">
+  <tr>
+    <th>Citizen Name</th>
+    <th>Registration<br>ID</th>
+    <th>Scan</th>
+    <th>Event</th>
+    <th>By</th>
+    <th>Date/Time</th>
+    <th>Location</th>
+    <th>IP<br>Address</th>
+    <th>Clerk<br>comment</th>
+  </tr>
+
+  <% for activity in @activities %>
+    <tr>
+      <td><%= activity.registration.name %></td>
+      <td><%= activity.registration_id %></td>
+      <td><%= image_tag('form.jpeg')%></td>
+      <td><%= activity.message || '&nbsp;'%></td>
+      <td><%= activity.clerk ? "#{activity.clerk.name} (Clerk)" : "#{activity.registration.name} (Registrant)" %></td>
+      <td><%= date_time_display(activity.created_at) %></td>
+      <td><%= activity.location || '&nbsp;'%></td>
+      <td><%= activity.ip_address || '&nbsp;'%></td>
+      <td><%= activity.comment || '&nbsp;'%></td>
+    </tr>
+  <% end %>
+</table>

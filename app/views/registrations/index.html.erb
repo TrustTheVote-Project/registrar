@@ -1,0 +1,40 @@
+<h1>Listing registrations</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Updated</th>
+    <th>Salutation</th>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Last name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Dob</th>
+    <th>Phone</th>
+    <th>Party</th>
+    <th>Race</th>
+  </tr>
+
+<% for registration in @registrations %>
+  <tr>
+    <td><%= registration.id %></td>
+    <td><%=h registration.updated_at %></td>
+    <td><%=h registration.current_state %></td>
+    <td><%=h registration.salutation %></td>
+    <td><%=h registration.first_name %></td>
+    <td><%=h registration.middle_name %></td>
+    <td><%=h registration.last_name %></td>
+    <td><%=h registration.address %></td>
+    <td><%=h registration.city %></td>
+    <td><%=h registration.state %></td>
+    <td><%=h registration.zip %></td>
+    <td><%=h registration.date_of_birth %></td>
+    <td><%=h registration.phone %></td>
+    <td><%=h registration.party %></td>
+    <td><%=h registration.race %></td>
+  </tr>
+<% end %>
+</table>

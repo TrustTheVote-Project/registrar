@@ -1,0 +1,16 @@
+<h1>STEP 2: Please review your registration.</h1>
+
+<%=render :partial => 'display'%>
+
+<h2>If you need to make changes, <%= link_to 'click here', edit_registration_path(@registration) %>. Otherwise:</h2>
+
+<ol>
+  <li><%= link_to 'Print registration', '#' %>.</li>
+  <li>Sign the form and mail it.</li>
+  <li>
+    <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
+      <%= hidden_field :transition, 'submit' %>
+      <%= submit_tag 'Next' %>
+    <% end %>
+  </li>
+</ol>

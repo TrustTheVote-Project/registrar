@@ -1,0 +1,19 @@
+<h1>Activity for registration <%= @registration.id %></h1>
+
+<table cellpadding="5" border="1">
+  <tr>
+    <th>Date/Time</th>
+    <th>Activity</th>
+    <th>Who</th>
+    <th>Comment</th>
+  </tr>
+
+  <% for activity in @activities %>
+    <tr>
+      <td><%= date_time_display(activity.created_at) %></td>
+      <td><%= h activity.message %></td>
+      <td><%= activity.clerk ? "#{activity.clerk.abbreviated_name} (Clerk)" : "#{activity.registration.abbreviated_name} (Registrant)" %></td>
+      <td><%= activity.comment || '&nbsp;' %></td>
+    </tr>
+  <% end %>
+</table>

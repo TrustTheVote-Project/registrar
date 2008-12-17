@@ -1,0 +1,8 @@
+<h1>STEP 1: Please fill out the following form.</h1>
+
+<% form_for(@registration) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <p>
+    <%= f.submit "Next >>" %>
+  </p>
+<% end %>

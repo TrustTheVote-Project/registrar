@@ -1,0 +1,13 @@
+<p>
+  <b>Registration:</b>
+  <%=h @registration_activity.registration_id %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%=h @registration_activity.message %>
+</p>
+
+
+<%= link_to 'Edit', edit_registration_activity_path(@registration_activity) %> |
+<%= link_to 'Back', registration_activities_path %>

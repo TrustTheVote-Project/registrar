@@ -1,0 +1,6 @@
+<h1>STEP 1: Find registration by ID</h1>
+
+<% form_tag(registration_searches_path) do %>
+  Registration ID: <%= text_field_tag(:registration_id)%>
+  <%= submit_tag 'Find' %>
+<% end%>

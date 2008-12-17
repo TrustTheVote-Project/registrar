@@ -1,0 +1,54 @@
+<table>
+  <tr>
+    <td>ID: <%= @registration.id%></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      Salutation: <%= h @registration.salutation %>
+    </td>
+    <td>
+      First Name: <%= h @registration.first_name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Middle Name: <%= h @registration.middle_name %>
+    </td>
+    <td>
+      Last Name: <%= h @registration.last_name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Address: <%= h @registration.address %>
+    </td>
+    <td>
+      City: <%= h@registration.city %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      State: <%= h @registration.state %>
+    </td>
+    <td>
+      ZIP: <%= h @registration.zip %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Date of birth: <%= h @registration.date_of_birth %>
+    </td>
+    <td>
+      Phone: <%= h @registration.phone %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Party: <%= h @registration.party %>
+    </td>
+    <td>
+      Race: <%= h @registration.race %>
+    </td>
+  </tr>
+</table>

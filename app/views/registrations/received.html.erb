@@ -1,0 +1,37 @@
+<h1>
+  STEP 2: Please review the registration received in the mail with these data.
+</h1>
+
+<%= render :partial => 'display' %>
+
+<h1>
+  STEP 3: Please scan and upload the registration received in the mail.
+</h1>
+
+<div id='upload'>
+  <div>
+    <%= button_to_function "Scan & Upload" do |page|
+      page[:upload].visual_effect :slide_up
+      page[:after_upload].visual_effect :slide_down
+    end %>
+  </div>
+</div>
+
+
+<div id="after_upload" style="display:none; height: 100px">
+  <div>
+    <img src="/images/form.jpeg">
+
+    <h1>STEP 4: Please approve or reject this registration.</h1>
+    <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
+      <%= hidden_field :transition, 'approve' %>
+      <%= submit_tag 'Approve' %>
+    <% end %>
+    <p>OR:</p>
+    <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
+      <%= hidden_field :transition, 'reject' %>
+      <%= submit_tag 'Reject' %>
+      Reason for Rejection: <%= text_field_tag :comment %>
+    <% end %>
+  </div>
+</div>

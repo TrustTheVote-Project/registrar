@@ -1,0 +1,19 @@
+<h1>New registration_activity</h1>
+
+<% form_for(@registration_activity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :registration_id %><br />
+    <%= f.text_field :registration_id %>
+  </p>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', registration_activities_path %>

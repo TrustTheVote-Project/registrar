@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>State of Jeffersonia's website</title>
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag :defaults %>
+</head>
+<body>
+<div style="background-color:cornflowerblue;">
+  State of Jeffersonia's website
+  <br>
+  <%= link_to "home", home_path %>
+</div>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:error] %>
+  <div class="error"><%= flash[:error] %></div>
+<% end %>
+
+<%= yield %>
+<div style="position:absolute; top:5px; right:5px; background-color:white; border: 1px solid black; padding: 5px;">
+  <%= image_tag('/images/osdv.jpg') %>
+  <br>
+  <br>
+  <%= image_tag('/images/powered_by_pivotal.gif') %>
+</div>
+</body>
+</html>
