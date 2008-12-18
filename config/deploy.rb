@@ -139,12 +139,12 @@ end
 #  end
 #end
 #
-#namespace :deploy do
-#  desc "Run geminstaller"
-#  task :geminstaller, :roles => [:app] do
-#    sudo "geminstaller --config #{current_release}/config/geminstaller.yml"
-#  end
-#
+namespace :deploy do
+  desc "Run geminstaller"
+  task :geminstaller, :roles => [:app] do
+    sudo "geminstaller --config #{current_release}/config/geminstaller.yml"
+  end
+end
 #  namespace :from do
 #    desc "Deploy from head"
 #    task :head do
@@ -275,7 +275,7 @@ end
 #after "deploy:migrations", "deploy:cleanup"
 #after "deploy:update_code", "deploy:symlink_configs"
 #after "deploy:update_code", "deploy:migrate"
-#before "deploy:migrate", "deploy:geminstaller"
+before "deploy:migrate", "deploy:geminstaller"
 
 # uncomment the following to have a database backup done before every migration
 # before "deploy:migrate", "db:dump"
