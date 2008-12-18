@@ -9,6 +9,7 @@ config.cache_classes = true
 
 # Use a different logger for distributed setups
 # config.logger = SyslogLogger.new
+config.whiny_nils = true
 
 # Full error reports are disabled and caching is turned on
 config.action_controller.consider_all_requests_local = false
