@@ -2,6 +2,8 @@
 # gem install eycap --source http://gems.engineyard.com
 require "eycap/recipes"
 
+set :monit_group,         "osdv"
+
 task :production do
 
   set :keep_releases,       5
@@ -16,6 +18,7 @@ task :production do
   set :branch, "master"
   set :scm, :git
   set :git_shallow_clone, 1
+
 
   # set :deploy_via,          :filtered_remote_cache
   set :deploy_via, :remote_cache
