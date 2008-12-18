@@ -20,7 +20,7 @@ defaults:
 gems:
 - name: capistrano
   version: >= 2.5.0
-- name: engineyard-eycap
+- name: eycap
   version: 0.3.11
 - name: geminstaller
   version: 0.4.5
