@@ -19,7 +19,7 @@ defaults:
   install_options: --include-dependencies
 gems:
 - name: capistrano
-  version: >= 2.5.0cap
+  version: >= 2.5.0
 - name: engineyard-eycap
   version: 0.3.11
 - name: geminstaller
