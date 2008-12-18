@@ -103,44 +103,44 @@ end
 #before "deploy:update_code", "git_repo:set_the_correct_branch"
 #after "deploy:update_code", "git_repo:update_environment_tag"
 #
-namespace :mongrel do
-  desc <<-DESC
-  Start Mongrel processes on the app server.  This uses the :use_sudo variable to determine whether to use sudo or not. By default, :use_sudo is
-  set to true.
-  DESC
-  task :start, :roles => :app do
-    if ey
-      sudo "/usr/bin/monit start all -g #{monit_group}"
-    else
-      run "#{deploy_to}/current/config/mongrel/mongrel_cluster restart #{deploy_to}/current/config/mongrel/#{rails_env}"
-    end
-  end
-
-  desc <<-DESC
-  Restart the Mongrel processes on the app server by starting and stopping the cluster. This uses the :use_sudo
-  variable to determine whether to use sudo or not. By default, :use_sudo is set to true.
-  DESC
-  task :restart, :roles => :app do
-    if ey
-      sudo "/usr/bin/monit restart all -g #{monit_group}"
-    else
-      mongrel.start
-    end
-  end
-
-  desc <<-DESC
-  Stop the Mongrel processes on the app server.  This uses the :use_sudo
-  variable to determine whether to use sudo or not. By default, :use_sudo is
-  set to true.
-  DESC
-  task :stop, :roles => :app do
-    if ey
-      sudo "/usr/bin/monit stop all -g #{monit_group}"
-    else
-      run "#{deploy_to}/current/config/mongrel/mongrel_cluster stop #{deploy_to}/current/config/mongrel/#{rails_env}"
-    end
-  end
-end
+#namespace :mongrel do
+#  desc <<-DESC
+#  Start Mongrel processes on the app server.  This uses the :use_sudo variable to determine whether to use sudo or not. By default, :use_sudo is
+#  set to true.
+#  DESC
+#  task :start, :roles => :app do
+#    if ey
+#      sudo "/usr/bin/monit start all -g #{monit_group}"
+#    else
+#      run "#{deploy_to}/current/config/mongrel/mongrel_cluster restart #{deploy_to}/current/config/mongrel/#{rails_env}"
+#    end
+#  end
+#
+#  desc <<-DESC
+#  Restart the Mongrel processes on the app server by starting and stopping the cluster. This uses the :use_sudo
+#  variable to determine whether to use sudo or not. By default, :use_sudo is set to true.
+#  DESC
+#  task :restart, :roles => :app do
+#    if ey
+#      sudo "/usr/bin/monit restart all -g #{monit_group}"
+#    else
+#      mongrel.start
+#    end
+#  end
+#
+#  desc <<-DESC
+#  Stop the Mongrel processes on the app server.  This uses the :use_sudo
+#  variable to determine whether to use sudo or not. By default, :use_sudo is
+#  set to true.
+#  DESC
+#  task :stop, :roles => :app do
+#    if ey
+#      sudo "/usr/bin/monit stop all -g #{monit_group}"
+#    else
+#      run "#{deploy_to}/current/config/mongrel/mongrel_cluster stop #{deploy_to}/current/config/mongrel/#{rails_env}"
+#    end
+#  end
+#end
 #
 namespace :deploy do
   desc "Run geminstaller"
