@@ -31,6 +31,7 @@ local:
 production:
   <<: *development
   database: osdv_production
+  socket:  /var/run/mysqld/mysqld.sock
 
 demo:
   <<: *development
