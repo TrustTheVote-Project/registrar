@@ -31,7 +31,7 @@ task :production do
   ssh_options[:paranoid] = false
 
   role :web, "65.74.186.4:8124"
-  role :app, "65.74.186.4:8124", :mongrel => true, :primary => true
+  role :app, "65.74.186.4:8124", :mongrel => false, :primary => true
   role :db,  "65.74.186.4:8124",  :primary => true
 
   set :rails_env, "production"
