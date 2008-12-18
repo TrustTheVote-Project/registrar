@@ -1,0 +1,32 @@
+--- 
+#
+# This is a GemInstaller config file (http://geminstaller.rubyforge.org)
+# It was generated using the 'geminstaller --print-rogue-gems' option on Wed Dec 17 17:06:35 -0800 2008
+#
+# You can bootstrap your config by piping the output to a file: 
+#   'geminstaller --print-rogue-gems > geminstaller.yml'
+#
+# You can then install these gems on another system by running geminstaller with this file.
+#
+# The following config file(s) and gems were already specified:
+#   Files:
+#     * geminstaller.yml
+#     * config/geminstaller.yml
+#   Gems:
+#     No Gems
+#
+defaults:
+  install_options: --include-dependencies
+gems:
+- name: capistrano
+  version: >= 2.5.0cap
+- name: engineyard-eycap
+  version: 0.3.11
+- name: geminstaller
+  version: 0.4.5
+- name: rails
+  version: 2.2.2
+- name: rspec
+  version: 1.1.11
+- name: rspec-rails
+  version: 1.1.11

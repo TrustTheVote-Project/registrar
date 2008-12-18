@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module relativePaths="false" type="RUBY_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="RailsFacetType" name="Ruby on Rails">
+      <configuration>
+        <RAILS_FACET_CONFIG_ID NAME="SHOULD_USE_RSPEC_PLUGIN" VALUE="false" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_APPLICATION_ROOT" VALUE="$MODULE_DIR$" />
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="RModuleSettingsStorage">
+    <RMODULE_SETTINGS_STORAGE_ID NAME="NUMBER" VALUE="0" />
+  </component>
+  <component name="RailsViewFoldersManager">
+    <USER_URLS url="file://$MODULE_DIR$/vendor/plugins" />
+    file:///Users/pivotal/workspace/osdv/vendor/plugins
+    <USER_URLS url="file://$MODULE_DIR$/lib" />
+    file:///Users/pivotal/workspace/osdv/lib
+    <USER_URLS url="file://$MODULE_DIR$/vendor/rails" />
+    file:///Users/pivotal/workspace/osdv/vendor/rails
+    <USER_URLS url="file://$MODULE_DIR$/public/stylesheets" />
+    file:///Users/pivotal/workspace/osdv/public/stylesheets
+    <USER_URLS url="file://$MODULE_DIR$/public/javascripts" />
+    file:///Users/pivotal/workspace/osdv/public/javascripts
+    <USER_URLS url="file://$MODULE_DIR$/config" />
+    file:///Users/pivotal/workspace/osdv/config
+    <USER_URLS url="file://$MODULE_DIR$/spec" />
+    file:///Users/pivotal/workspace/osdv/spec
   </component>
 </module>
 

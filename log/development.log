@@ -1,13 +1,29 @@
-
-
-Processing RegistrationsController#show (for 127.0.0.1 at 2008-12-17 11:20:48) [GET]
-  Parameters: {"id"=>"15"}
-  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mRegistration Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `registrations`[0m
-  [4;36;1mRegistration Load (0.3ms)[0m   [0;1mSELECT * FROM `registrations` WHERE (`registrations`.`id` = 15) [0m
-Rendering template within layouts/clerk
-Rendering /registrations/received
-Rendered registrations/_display (0.8ms)
-  [4;35;1mUser Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
-Completed in 33ms (View: 18, DB: 7) | 200 OK [http://localhost/registrations/15]
+# Logfile created on Thu Dec 18 11:00:13 -0800 2008  [4;36;1mSQL (19.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (49.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (10.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `osdv_test`[0m
+  [4;35;1mSQL (17.3ms)[0m   [0mCREATE DATABASE `osdv_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE `registration_activities` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `registration_id` int(11), `message` varchar(255), `created_at` datetime, `updated_at` datetime, `clerk_id` int(11), `comment` varchar(255), `location` varchar(255), `ip_address` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE `registrations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `salutation` varchar(255), `first_name` varchar(255), `middle_name` varchar(255), `last_name` varchar(255), `address` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `date_of_birth` date, `phone` varchar(255), `party` varchar(255), `race` varchar(255), `created_at` datetime, `updated_at` datetime, `status` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (7.4ms)[0m   [0;1mCREATE TABLE `sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `session_id` varchar(255) NOT NULL, `data` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (8.6ms)[0m   [0mCREATE INDEX `index_sessions_on_session_id` ON `sessions` (`session_id`)[0m
+  [4;36;1mSQL (15.9ms)[0m   [0;1mCREATE INDEX `index_sessions_on_updated_at` ON `sessions` (`updated_at`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (18.7ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `crypted_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `remember_token_expires_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (4.9ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (14.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081213193940')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081212183701')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081212183727')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081212192039')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20081212195500')[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20081213193544')[0m
