@@ -267,10 +267,10 @@ end
 #
 #before "deploy:symlink", "deploy:solr:setup"
 #after "deploy:symlink", "set_up_document_storage"
-after "deploy:symlink", "deploy:monit:setup"
-after "set_up_document_storage", "deploy:solr:stop"
-after "deploy:solr:stop", "deploy:solr:start"
-after "deploy:solr:start", "deploy:solr:rebuild"
+#after "deploy:symlink", "deploy:monit:setup"
+#after "set_up_document_storage", "deploy:solr:stop"
+#after "deploy:solr:stop", "deploy:solr:start"
+#after "deploy:solr:start", "deploy:solr:rebuild"
 
 # Do not change below unless you know what you are doing!
 
