@@ -148,48 +148,48 @@ namespace :deploy do
     sudo "geminstaller --config #{current_release}/config/geminstaller.yml"
   end
 #end
-#  namespace :from do
-#    desc "Deploy from head"
-#    task :head do
-#
-#    end
-#  end
-#
-#  namespace :solr do
-#    task :rebuild, :roles => :app do
-#      if ey
-#        run "cd #{current_release} && ruby script/rebuild_search_index.rb #{rails_env}"
-#      else
-#        # this is still broken on demo
-#      end
-#    end
-#
-#    task :stop, :roles => :app do
-#      if ey
-#        sudo "monit stop solr"
-#      else
-#        #        sudo "/etc/init.d/solr stop"
-#      end
-#    end
-#
-#    task :start, :roles => :app do
-#      if ey
-#        sudo "monit start solr"
-#      else
-#        #        sudo "/etc/init.d/solr start"
-#      end
-#    end
-#
-#    task :setup, :roles => :app do
-#      on_rollback {
-#        sudo "cp -f #{previous_release}/config/solr/#{rails_env}/solr_init.sh /etc/init.d/solr"
-#      }
-#      sudo "rm -f /etc/init.d/solr"
-#      sudo "cp -f #{release_path}/config/solr/#{rails_env}/solr_init.sh /etc/init.d/solr"
-#    end
-#
-#  end
-#
+  #  namespace :from do
+  #    desc "Deploy from head"
+  #    task :head do
+  #
+  #    end
+  #  end
+  #
+  #  namespace :solr do
+  #    task :rebuild, :roles => :app do
+  #      if ey
+  #        run "cd #{current_release} && ruby script/rebuild_search_index.rb #{rails_env}"
+  #      else
+  #        # this is still broken on demo
+  #      end
+  #    end
+  #
+  #    task :stop, :roles => :app do
+  #      if ey
+  #        sudo "monit stop solr"
+  #      else
+  #        #        sudo "/etc/init.d/solr stop"
+  #      end
+  #    end
+  #
+  #    task :start, :roles => :app do
+  #      if ey
+  #        sudo "monit start solr"
+  #      else
+  #        #        sudo "/etc/init.d/solr start"
+  #      end
+  #    end
+  #
+  #    task :setup, :roles => :app do
+  #      on_rollback {
+  #        sudo "cp -f #{previous_release}/config/solr/#{rails_env}/solr_init.sh /etc/init.d/solr"
+  #      }
+  #      sudo "rm -f /etc/init.d/solr"
+  #      sudo "cp -f #{release_path}/config/solr/#{rails_env}/solr_init.sh /etc/init.d/solr"
+  #    end
+  #
+  #  end
+  #
   namespace :monit do
     task :setup, :roles => :app do
       if ey
@@ -267,18 +267,18 @@ end
 #
 #before "deploy:symlink", "deploy:solr:setup"
 #after "deploy:symlink", "set_up_document_storage"
-#after "deploy:symlink", "deploy:monit:setup"
-#after "set_up_document_storage", "deploy:solr:stop"
-#after "deploy:solr:stop", "deploy:solr:start"
-#after "deploy:solr:start", "deploy:solr:rebuild"
-#
-## Do not change below unless you know what you are doing!
-#
-#after "deploy", "deploy:cleanup"
-#after "deploy:migrations", "deploy:cleanup"
-#after "deploy:update_code", "deploy:symlink_configs"
-#after "deploy:update_code", "deploy:migrate"
+after "deploy:symlink", "deploy:monit:setup"
+after "set_up_document_storage", "deploy:solr:stop"
+after "deploy:solr:stop", "deploy:solr:start"
+after "deploy:solr:start", "deploy:solr:rebuild"
+
+# Do not change below unless you know what you are doing!
+
+after "deploy", "deploy:cleanup"
+after "deploy:migrations", "deploy:cleanup"
+after "deploy:update_code", "deploy:symlink_configs"
+after "deploy:update_code", "deploy:migrate"
 before "deploy:migrate", "deploy:geminstaller"
 
 # uncomment the following to have a database backup done before every migration
-# before "deploy:migrate", "db:dump"
+before "deploy:migrate", "db:dump"
