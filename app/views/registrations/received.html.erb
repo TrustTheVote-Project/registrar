@@ -28,7 +28,7 @@
         <%= submit_tag 'Approve' %>
     <% end %>
     OR:
-    <% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "$('comment').value = $('reason').value.concat(' - ' + $('text_comment').value)") do %>
+    <% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "Registration.buildComment()") do %>
         <%= hidden_field :transition, 'reject' %>
         Reason for Rejection:
         <%= select_tag    :reason, options_for_select(['', 'Illegible', 'Incomplete', 'Signature Missing', 'Other'], '') %>
@@ -41,3 +41,20 @@
     <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+    Registration = function(){};
+    Registration.buildComment = function() {
+      var reason = $('reason').value;
+      var textComment = $('text_comment').value;
+      var comment = null;
+      if (reason && textComment) {
+        comment = reason + ' - ' + textComment;
+      } else if (reason) {
+        comment = reason;
+      } else {
+        comment = textComment;
+      }
+      $('comment').value = comment;
+    };
+</script>
