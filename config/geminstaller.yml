@@ -18,6 +18,8 @@
 defaults:
   install_options: --include-dependencies
 gems:
+- name: rails
+  version: 2.2.2
 - name: capistrano
   version: >= 2.5.0
 - name: engineyard-eycap

@@ -37,4 +37,4 @@ demo:
   <<: *development
   database: osdv_demo
   username: osdv
-  password: mekmitasdigoat
+  socket:  /var/run/mysqld/mysqld.sock

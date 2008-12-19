@@ -3,27 +3,25 @@
 require "eycap/recipes"
 
 set :monit_group,         "osdv"
+set :keep_releases,       5
+set :application,         "osdv"
+set :user,                "osdv"
+set :deploy_to,           "/data/#{application}"
+
+set :dbuser,        "root"
+set :dbpass,        "password"
+
+set :repository,  "git@github.com:pivotal/osdv.git"
+set :branch, "master"
+set :scm, :git
+set :git_shallow_clone, 1
+set :ey,  true
+
+# set :deploy_via,          :filtered_remote_cache
+set :deploy_via, :remote_cache
+set :repository_cache,    "cached-copy"
 
 task :production do
-
-  set :keep_releases,       5
-  set :application,         "osdv"
-  set :user,                "osdv"
-  set :deploy_to,           "/data/#{application}"
-
-  set :dbuser,        "root"
-  set :dbpass,        "password"
-
-  set :repository,  "git@github.com:pivotal/osdv.git"
-  set :branch, "master"
-  set :scm, :git
-  set :git_shallow_clone, 1
-
-
-  # set :deploy_via,          :filtered_remote_cache
-  set :deploy_via, :remote_cache
-  set :repository_cache,    "cached-copy"
-
   set :production_database, "osdv_production"
   set :production_dbhost,   "ey05-s00124"
 
@@ -37,7 +35,22 @@ task :production do
   set :rails_env, "production"
   set :environment_database, defer { production_database }
   set :environment_dbhost, defer { production_dbhost }
-  set :ey,  true
+end
+
+task :demo do
+  set :demo_database, "osdv_demo"
+  set :demo_dbhost,   "ey05-s00125"
+
+  # comment out if it gives you trouble. newest net/ssh needs this set.
+  ssh_options[:paranoid] = false
+
+  role :web, "65.74.186.4:8125"
+  role :app, "65.74.186.4:8125", :mongrel => true, :primary => true
+  role :db,  "65.74.186.4:8125",  :primary => true
+
+  set :rails_env, "demo"
+  set :environment_database, defer { demo_database }
+  set :environment_dbhost, defer { demo_dbhost }
 end
 #
 #task :demo do
