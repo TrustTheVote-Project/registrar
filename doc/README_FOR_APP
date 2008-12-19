@@ -1,5 +1,49 @@
-To build the guides:
+EY setup notes OSDV
 
-* Install source-highlighter (http://www.gnu.org/software/src-highlite/source-highlight.html)
-* Install the mizuho gem (http://github.com/FooBarWidget/mizuho/tree/master)
-* Run `rake guides` from the railties directory
+ssh to ey account
+
+== Git - Make sure you can check out code from git hub. ==
+Set up keys:
+log into the githup and click 'account'
+add a new key, example:
+    title: user@hostname
+    key: [content of .ssh/git_deploy.pub]
+
+=== To test it:
+mkdir git_tmp
+cd git_tmp
+git clone git@github.com:pivotal/osdv.git
+it should work!  Delete git_tmp if so.  Otherwise, debug.
+
+== Database ==
+ssh to the EY machine and perform the following:
+sudo /usr/bin/mysql_install_db
+sudo /etc/init.d/mysql start
+mysql -uroot
+create database xxx_yyyy
+exit
+
+sudo /usr/bin/mysqladmin -u root  password 'password' # for now
+
+== Gems and Geminstaller ==
+
+=== Update to the latest rubygems:
+sudo ruby -S gem install rubygems-update
+sudo ruby -S update_rubygems
+
+=== Get ready to install gems:
+sudo gem sources -a http://gems.github.com
+sudo gem install geminstaller
+
+
+== Deploy!! ==
+
+=== On local machine:
+cap demo deploy:setup
+
+=== On EY machine:
+sudo chown -R osdv:osdv data/osdv/releases/
+sudo chown -R osdv:osdv data/osdv/shared/
+
+=== On local machine:
+cap demo deploy
