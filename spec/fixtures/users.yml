@@ -1,6 +1,8 @@
 quentin:
   id:                        1
   login:                     quentin
+  first_name:                Quentin
+  last_name:                 Smith
   email:                     quentin@example.com
   salt:                      356a192b7913b04c54574d18c28d46e6395428ab # SHA1('0')
   crypted_password:          19d74e57ad9983fb24104b9de273685ef116324b # 'monkey'
@@ -10,6 +12,8 @@ quentin:
       
 aaron:
   id:                        2
+  first_name:                Aaron
+  last_name:                 Smith
   login:                     aaron
   email:                     aaron@example.com
   salt:                      da4b9237bacccdf19c0760cab7aec4a8359010b0 # SHA1('1')
@@ -21,6 +25,8 @@ aaron:
 
 old_password_holder:
   id:                        3
+  first_name:                Zed
+  last_name:                 Smith
   login:                     old_password_holder
   email:                     salty_dog@example.com
   salt:                      7e3041ebc2fc05a40c60028e2c4901a81035d3cd
