@@ -36,5 +36,4 @@ production:
 demo:
   <<: *development
   database: osdv_demo
-  username: osdv
   socket:  /var/run/mysqld/mysqld.sock
