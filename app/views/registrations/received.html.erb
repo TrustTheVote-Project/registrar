@@ -11,8 +11,8 @@
 <div id='upload'>
   <div>
     <%= button_to_function "Scan & Upload" do |page|
-      page[:upload].visual_effect :slide_up
-      page[:after_upload].visual_effect :slide_down
+        page[:upload].visual_effect :slide_up
+        page[:after_upload].visual_effect :slide_down
     end %>
   </div>
 </div>
@@ -24,14 +24,20 @@
 
     <h1>STEP 4: Please approve or reject this registration.</h1>
     <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
-      <%= hidden_field :transition, 'approve' %>
-      <%= submit_tag 'Approve' %>
+        <%= hidden_field :transition, 'approve' %>
+        <%= submit_tag 'Approve' %>
     <% end %>
-    <p>OR:</p>
-    <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
-      <%= hidden_field :transition, 'reject' %>
-      <%= submit_tag 'Reject' %>
-      Reason for Rejection: <%= text_field_tag :comment %>
+    OR:
+    <% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "$('comment').value = $('reason').value.concat(' - ' + $('text_comment').value)") do %>
+        <%= hidden_field :transition, 'reject' %>
+        Reason for Rejection:
+        <%= select_tag    :reason, options_for_select(['', 'Illegible', 'Incomplete', 'Signature Missing', 'Other'], '') %>
+        <br/>
+        Comment:
+        <%= text_area_tag :text_comment %>
+        <%= hidden_field_tag :comment %>
+        <br/><br/>
+        <%= submit_tag 'Reject' %>
     <% end %>
   </div>
 </div>
