@@ -37,9 +37,9 @@ task :production do
   set :environment_dbhost, defer { production_dbhost }
 end
 
-task :demo do
-  set :demo_database, "osdv_demo"
-  set :demo_dbhost,   "localhost"
+task :staging do
+  set :staging_database, "osdv_staging"
+  set :staging_dbhost,   "localhost"
 
   # comment out if it gives you trouble. newest net/ssh needs this set.
   ssh_options[:paranoid] = false
@@ -48,9 +48,9 @@ task :demo do
   role :app, "65.74.186.4:8125", :mongrel => true, :primary => true
   role :db,  "65.74.186.4:8125",  :primary => true
 
-  set :rails_env, "demo"
-  set :environment_database, defer { demo_database }
-  set :environment_dbhost, defer { demo_dbhost }
+  set :rails_env, "staging"
+  set :environment_database, defer { staging_database }
+  set :environment_dbhost, defer { staging_dbhost }
 end
 #
 #task :demo do

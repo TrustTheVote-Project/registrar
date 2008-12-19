@@ -37,3 +37,8 @@ demo:
   <<: *development
   database: osdv_demo
   socket:  /var/run/mysqld/mysqld.sock
+
+staging:
+  <<: *development
+  database: osdv_staging
+  socket:  /var/run/mysqld/mysqld.sock
