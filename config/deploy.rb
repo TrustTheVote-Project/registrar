@@ -23,7 +23,7 @@ set :repository_cache,    "cached-copy"
 
 task :production do
   set :production_database, "osdv_production"
-  set :production_dbhost,   "ey05-s00124"
+  set :production_dbhost,   "localhost"
 
   # comment out if it gives you trouble. newest net/ssh needs this set.
   ssh_options[:paranoid] = false
@@ -39,7 +39,7 @@ end
 
 task :demo do
   set :demo_database, "osdv_demo"
-  set :demo_dbhost,   "ey05-s00125"
+  set :demo_dbhost,   "localhost"
 
   # comment out if it gives you trouble. newest net/ssh needs this set.
   ssh_options[:paranoid] = false
