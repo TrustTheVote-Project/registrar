@@ -1,0 +1,25 @@
+<h1>
+  STEP 3: Please scan and upload the registration received in the mail.
+</h1>
+
+<div id='upload'>
+  <div>
+    <%= button_to_function "Scan & Upload" do |page|
+        page[:upload].visual_effect :slide_up
+        page[:after_upload].visual_effect :slide_down
+    end %>
+  </div>
+</div>
+
+
+<div id="after_upload" style="display:none; height: 100px">
+  <div>
+    <img src="/images/form.jpeg">
+    <br>
+    <%= button_to_function "Incorrect scan - try again" do |page|
+        page[:upload].visual_effect :slide_down
+        page[:after_upload].visual_effect :slide_up
+    end %>
+    <%= button_to "Next >>", step4_registration_clerks_path(@registration), :method => :get %>
+  </div>
+</div>

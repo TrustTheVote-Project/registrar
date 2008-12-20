@@ -8,15 +8,22 @@ ActionController::Routing::Routes.draw do |map|
   map.step1_create_registration_citizens "registrations/citizens/create", :controller => 'registrations/citizens', :action => 'create'
   map.step1_update_registration_citizens "registrations/:registration_id/citizens/update", :controller => 'registrations/citizens', :action => 'update', :method => :put
   
-  steps = { :step2 => :get,
-          :step3 => :get,
-          :step4 => :get,
-          :step5 => :get
+  citizen_steps = {
+    :step2 => :get,
+    :step3 => :get,
+    :step4 => :get,
+    :step5 => :get
   }
+
+  clerk_steps = {
+    :step2 => :get,
+    :step3 => :get,
+    :step4 => :get
+  }
+
   map.resources :registrations  do |registration|
-    registration.resource :citizens, :controller => 'registrations/citizens',   :member => steps do |citizen|
-      
-    end
+    registration.resource :citizens, :controller => 'registrations/citizens', :member => citizen_steps
+    registration.resource :clerks, :controller => 'registrations/clerks', :member => clerk_steps
     registration.resource :state_transitions
   end
 

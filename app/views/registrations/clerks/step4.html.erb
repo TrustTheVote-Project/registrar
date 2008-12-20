@@ -1,0 +1,41 @@
+<h1>STEP 4: Please approve or reject this registration.</h1>
+<hr>
+<%= render :partial => '/registrations/display' %>
+<img src="/images/form.jpeg">
+<hr>
+<br>
+<br>
+<% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
+  <%= hidden_field :transition, 'approve' %>
+  <%= submit_tag 'Approve' %>
+<% end %>
+OR:
+<% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "Registration.buildComment()") do %>
+  <%= hidden_field :transition, 'reject' %>
+  Reason for Rejection:
+  <%= select_tag    :reason, options_for_select(['', 'Illegible', 'Incomplete', 'Signature Missing', 'Other'], '') %>
+  <br/>
+  Comment:
+  <%= text_area_tag :text_comment %>
+  <%= hidden_field_tag :comment %>
+  <br/><br/>
+  <%= submit_tag 'Reject' %>
+<% end %>
+
+
+<script type="text/javascript">
+  Registration = function(){};
+      Registration.buildComment = function() {
+          var reason = $('reason').value;
+          var textComment = $('text_comment').value;
+          var comment = null;
+          if (reason && textComment) {
+              comment = reason + ' - ' + textComment;
+              } else if (reason) {
+              comment = reason;
+              } else {
+              comment = textComment;
+              }
+          $('comment').value = comment;
+          };
+</script>

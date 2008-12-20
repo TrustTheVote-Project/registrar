@@ -15,14 +15,24 @@ describe RegistrationsController do
     end
   end
 
-  describe 'show' do
+  describe 'show for approved & rejected' do
     before do
       @registration = Registration.create(valid_registration_attributes)
+      @registration.submit!
+      @registration.receive!
     end
 
-    it 'should resolve the registration and render the index template' do
+    it 'should resolve the registration and render the approved template when approved' do
+      @registration.approve!
       get :show, :id => @registration.id
-      response.should render_template('draft')
+      response.should render_template('approved')
+      assigns[:registration].should == @registration
+    end
+
+    it 'should resolve the registration and render the rejected template when rejected' do
+      @registration.reject!
+      get :show, :id => @registration.id
+      response.should render_template('rejected')
       assigns[:registration].should == @registration
     end
   end

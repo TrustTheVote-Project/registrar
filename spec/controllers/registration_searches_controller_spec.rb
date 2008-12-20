@@ -29,7 +29,7 @@ describe RegistrationSearchesController do
       registration.submit!; registration.receive!
 
       post :create, :registration_id => registration.id
-      response.should redirect_to(registration_path(registration))
+      response.should redirect_to(step2_registration_clerks_path(registration))
     end
 
     it 'should not find a registration that is not received' do
