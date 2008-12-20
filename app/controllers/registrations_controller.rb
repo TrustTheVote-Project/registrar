@@ -10,6 +10,10 @@ class RegistrationsController < ApplicationController
            :layout => (@registration.under_edit? || @registration.submitted?) ? 'citizen' : 'clerk'
   end
 
+  def step2
+    render :action => :show
+  end
+
   def new
     @registration = Registration.new
     render :layout => 'citizen'

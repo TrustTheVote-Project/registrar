@@ -2,7 +2,21 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :registration_activities
   map.resource :receive_submitted_registrations
   map.resources :registration_searches
-  map.resources :registrations do |registration|
+
+  map.step1_new_registration_citizens "registrations/citizens/new/step1", :controller => 'registrations/citizens', :action => 'new'
+  map.step1_edit_registration_citizens "registrations/citizens/:registration_id/step1", :controller => 'registrations/citizens', :action => 'edit'
+  map.step1_create_registration_citizens "registrations/citizens/create", :controller => 'registrations/citizens', :action => 'create'
+  map.step1_update_registration_citizens "registrations/:registration_id/citizens/update", :controller => 'registrations/citizens', :action => 'update', :method => :put
+  
+  steps = { :step2 => :get,
+          :step3 => :get,
+          :step4 => :get,
+          :step5 => :get
+  }
+  map.resources :registrations  do |registration|
+    registration.resource :citizens, :controller => 'registrations/citizens',   :member => steps do |citizen|
+      
+    end
     registration.resource :state_transitions
   end
 

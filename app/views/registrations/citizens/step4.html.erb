@@ -1,0 +1,12 @@
+<h1>STEP 4: Mail Your Registration To Us!</h1>
+
+<p>
+
+  <%= image_tag 'mail31.gif' %>
+</p>
+
+<% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
+    <%= hidden_field :transition, 'submit' %>
+    <%= submit_tag 'Next' %>
+    <%= hidden_field_tag :next_url, step5_registration_citizens_path(@registration) %>
+<% end %>

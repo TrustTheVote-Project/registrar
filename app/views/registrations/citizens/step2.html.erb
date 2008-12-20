@@ -1,0 +1,7 @@
+<h1>STEP 2: Please review your registration.</h1>
+
+<%= render :partial => 'registrations/display' %>
+
+<h2>If you need to make changes, <%= link_to 'click here',  step1_edit_registration_citizens_path(@registration) %>. Otherwise:</h2>
+
+<%= button_to "Next >>", step3_registration_citizens_path(@registration), :method => :get %>

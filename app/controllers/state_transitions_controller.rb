@@ -6,7 +6,9 @@ class StateTransitionsController < ApplicationController
     @registration.activity_comment = params[:comment]
     transition = params[:transition]
     @registration.send("#{transition}!".to_sym)
-    redirect_to(@registration)
+
+
+    params[:next_url].blank? ? redirect_to(@registration) : redirect_to(params[:next_url])
   end
 
 end

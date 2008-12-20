@@ -1,0 +1,5 @@
+<h1>STEP 5: You're done!  Your registration has been submitted.</h1>
+<p>
+  Your registration's tracking number is <%=@registration.id%>.
+  You can track the progress of your registration here: <%= link_to(tracking_url(@registration.id), tracking_url(@registration.id)) %>
+</p>

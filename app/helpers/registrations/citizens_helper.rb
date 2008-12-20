@@ -1,0 +1,2 @@
+module Registrations::CitizensHelper
+end
