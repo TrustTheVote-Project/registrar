@@ -95,16 +95,4 @@ describe RegistrationsController do
     end
   end
 
-  describe "Steps" do
-    before(:each) do
-      @registration = Registration.create(valid_registration_attributes)
-    end
-
-    it '#step2 should have registration in draft state' do
-      get :step2, :id => @registration.to_param
-      response.should render_template('step2')
-      assigns[:registration].should == @registration
-    end
-  end
-
 end

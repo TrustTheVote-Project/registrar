@@ -55,7 +55,7 @@ describe Registrations::CitizensController do
       it 'should update the registration and redirect to show' do
         put :update, :registration_id => @registration.id, :registration => {:first_name => 'changed'}
         @registration.reload.first_name.should == 'changed'
-        response.should redirect_to(step1_registration_citizens_url(@registration))
+        response.should redirect_to(step2_registration_citizens_url(@registration))
       end
     end
 

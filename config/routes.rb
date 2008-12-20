@@ -3,8 +3,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :receive_submitted_registrations
   map.resources :registration_searches
 
-  map.step1_new_registration_citizens "registrations/citizens/new/step1", :controller => 'registrations/citizens', :action => 'new'
-  map.step1_edit_registration_citizens "registrations/citizens/:registration_id/step1", :controller => 'registrations/citizens', :action => 'edit'
+  map.step1_new_registration_citizens "registrations/citizens/step1", :controller => 'registrations/citizens', :action => 'new'
+  map.step1_edit_registration_citizens "registrations/:registration_id/citizens/step1", :controller => 'registrations/citizens', :action => 'edit'
   map.step1_create_registration_citizens "registrations/citizens/create", :controller => 'registrations/citizens', :action => 'create'
   map.step1_update_registration_citizens "registrations/:registration_id/citizens/update", :controller => 'registrations/citizens', :action => 'update', :method => :put
   
