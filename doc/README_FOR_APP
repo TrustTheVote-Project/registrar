@@ -80,3 +80,5 @@ run all
 == to run the server from the osdv dir
 script/server
 
+== to create a new migration
+script/generate migration -c your_cool_migration_name_here_with_underscores_like_this
