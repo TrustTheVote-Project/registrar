@@ -86,7 +86,6 @@ script/generate migration -c your_cool_migration_name_here_with_underscores_like
 == simple command line git
 git status
 
-git status
 # On branch master
 # Changed but not updated:
 #   (use "git add <file>..." to update what will be committed)
@@ -110,6 +109,7 @@ git status
 #
 
 git push origin master
+
 
 
 

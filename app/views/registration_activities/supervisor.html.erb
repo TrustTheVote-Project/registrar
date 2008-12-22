@@ -5,6 +5,7 @@
 <table cellpadding="5" border="1">
   <tr>
     <th>Citizen Name</th>
+    <th>Citizen ID Number</th>
     <th>Registration<br>ID</th>
     <th>Scan</th>
     <th>Event</th>
@@ -18,6 +19,7 @@
   <% for activity in @activities %>
     <tr>
       <td><%= activity.registration.name %></td>
+      <td><%= activity.registration.id_number %></td>
       <td><%= activity.registration_id %></td>
       <td><%= image_tag('form.jpeg')%></td>
       <td><%= activity.message || '&nbsp;'%></td>
