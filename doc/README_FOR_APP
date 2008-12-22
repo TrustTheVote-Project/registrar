@@ -83,5 +83,18 @@ script/server
 == to create a new migration
 script/generate migration -c your_cool_migration_name_here_with_underscores_like_this
 
-== to push to master if you forget to check that stupid checkbox
+== simple command line git
+git status
+
+git status
+# On branch master
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#
+#	modified:   doc/README_FOR_APP
+# .......
+
+
+
+
 git push origin master
