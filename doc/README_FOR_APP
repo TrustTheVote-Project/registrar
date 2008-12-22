@@ -1,3 +1,17 @@
+All Machines:
+
+=== Update to the latest rubygems:
+gem --version
+
+(if this is not 1.31, do the following)
+sudo ruby -S gem install rubygems-update
+sudo ruby -S update_rubygems
+
+=== Get ready to install gems:
+sudo gem sources -a http://gems.github.com
+sudo gem install geminstaller
+
+
 EY setup notes OSDV
 
 ssh to ey account
@@ -27,14 +41,6 @@ sudo /usr/bin/mysqladmin -u root  password 'password' # for now
 
 == Gems and Geminstaller ==
 
-=== Update to the latest rubygems:
-sudo ruby -S gem install rubygems-update
-sudo ruby -S update_rubygems
-
-=== Get ready to install gems:
-sudo gem sources -a http://gems.github.com
-sudo gem install geminstaller
-
 
 == Deploy!! ==
 
@@ -47,3 +53,30 @@ sudo chown -R osdv:osdv data/osdv/shared/
 
 === On local machine:
 cap demo deploy
+
+
+
+
+
+
+
+#############################################################################
+Basic setup stuff
+#########################################################
+
+== after update code:
+rake db:migrate
+rake db:migrate RAILS_ENV=test
+rake spec:db:fixtures:load # this will clear out all data and reload test data and users
+
+test users:
+user: aaron
+pass: monkey
+
+== to run the tests in rubymine:
+right-click on 'spec'
+run all
+
+== to run the server from the osdv dir
+script/server
+
