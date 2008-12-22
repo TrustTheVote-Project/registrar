@@ -94,6 +94,22 @@ git status
 #	modified:   doc/README_FOR_APP
 # .......
 
+git commit -am"jlm/sb: updating the docs"
+Created commit 667fd21: jlm/sb: updating the docs
+ 1 files changed, 14 insertions(+), 1 deletions(-)
+
+
+git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#
+#	modified:   doc/README_FOR_APP
+#
+
+git push origin master
 
 
 
