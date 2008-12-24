@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081223000705) do
+ActiveRecord::Schema.define(:version => 20081224204858) do
 
   create_table "registration_activities", :force => true do |t|
     t.integer  "registration_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20081223000705) do
     t.datetime "updated_at"
     t.string   "status"
     t.string   "id_number"
+    t.string   "county"
   end
 
   create_table "sessions", :force => true do |t|

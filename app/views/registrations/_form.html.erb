@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td>
-      <%= f.label :address %><br />
+      <%= f.label :street_address %><br />
       <%= f.text_field :address %>
     </td>
     <td>
@@ -32,8 +32,18 @@
   </tr>
   <tr>
     <td>
+      <%= f.label :county %><br />
+      <%= f.text_field :county %>
+    </td>
+    <td>
       <%= f.label :state %><br />
       <%= f.text_field :state %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :phone %><br />
+      <%= f.text_field :phone %>
     </td>
     <td>
       <%= f.label :zip %><br />
@@ -43,22 +53,26 @@
   <tr>
     <td>
       <%= f.label :date_of_birth %><br />
-      <%= f.date_select :date_of_birth, :start_year => 1900, :include_blank => true %>
+      <%= f.date_select :date_of_birth, :start_year => 1900, :end_year => 1991, :include_blank => true %>
     </td>
-    <td>
-      <%= f.label :phone %><br />
-      <%= f.text_field :phone %>
-    </td>
-  </tr>
-  <tr>
     <td>
       <%= f.label :party %><br />
       <%= f.text_field :party %>
     </td>
+  </tr>
+  <tr>
     <td>
-      <%= f.label :id_number %><br />
+      <%= f.label :id_number %>*<br />
       <%= f.text_field :id_number %>
+    </td>
+    <td>
+      Checkbox for no id number
     </td>
   </tr>
 
 </table>
+<p>* You may use your State of Jeffersonia Driver's License number as your identification number. If you do not have a
+    Jeffersonia Driver's License or do not wish to use it as your identificion number, you may use the last four digits
+    of your Social Security number. If you do not have or do not wish to use your Driver's License number or the
+    last four digits of your Social Security number, you may leave this field blank and the county BOE will assign an
+    identification number to you. This may cause delays in the processing of your voter registration application.

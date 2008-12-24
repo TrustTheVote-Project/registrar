@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td>ID: <%= @registration.id%></td>
-    <td></td>
+    <td>&nbsp;</td>
   </tr>
   <tr>
     <td>
@@ -33,6 +33,14 @@
     </td>
     <td>
       ZIP: <%= h @registration.zip %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      County: <%= h @registration.county %>
+    </td>
+    <td>
+      &nbsp;
     </td>
   </tr>
   <tr>

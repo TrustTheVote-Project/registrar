@@ -5,11 +5,11 @@
     like you.</p>
 
 <p>To register to vote in Jeffersonia you must attest:
-    <ol><li>You are a citizen of the United States</li>
+    <ul><li>You are a citizen of the United States</li>
         <li>You are a resident of Jeffersonia</li>
         <li>You are at least 18 years of age</li>
         <li>You are not currently serving a sentence or on parole for a felony conviction</li>
-    </ol>
+    </ul>
 
 
 <p>To expedite filling out your voter registration form, please have at hand the name of the county in which you live
@@ -20,11 +20,16 @@
     application.</p>
 
 <p>To register to vote you must submit an <em>original signed form</em> to the county Board of Elections for your
-    county. If you live in Adams, Polk, or Roosevelt county, you may also participate in our validation and
+    county. If you live in Adams county, you may also participate in our validation and
     accountability program for voter registrations. Your form will be electronically validated and the progress of
     your registration request will be availbale to you via our website. It is not required that you participate, and
     your participation in the program will not affect the approval or rejection of your application.</p>
 <h3>Next Step:</h3>
-<p><%= link_to 'Download the voter registration form', '#'%>, print it out, complete the form, and mail it.</p>
-<p>Or, if you live in Adams, Polk, or Roosevelt counties, you may use our <%= link_to 'online validation and tracking',
-    step1_new_registration_citizens_path %> for voter registrations.</p>
+<p><ol><li><%= link_to 'Download the voter registration form', '#'%>
+       <li>Print it out
+       <li>Complete and sign the form
+       <li>Mail the original signed completed form to your county Board of Elections office
+    </ol>
+<h4>Adams County Residents:</h4>
+<p>If you reside in Adams county, you may use our <%= link_to 'online validation and tracking',
+    step1_new_registration_citizens_path %> voter registration assistant.</p>
