@@ -37,7 +37,7 @@
     </td>
     <td>
       <%= f.label :state %><br />
-      <%= f.text_field :state %>
+      <%= f.hidden_field :state, :value => 'JA' %>JA
     </td>
   </tr>
   <tr>
@@ -57,7 +57,7 @@
     </td>
     <td>
       <%= f.label :party %><br />
-      <%= f.text_field :party %>
+      <%= f.select :party, ['Republican', 'Democratic'], :include_blank => true %>
     </td>
   </tr>
   <tr>

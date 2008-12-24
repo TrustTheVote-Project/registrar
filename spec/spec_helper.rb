@@ -73,6 +73,7 @@ def valid_registration_attributes
       :zip => '12345',
       :state => 'JA',
       :date_of_birth => Date.parse('1970-01-01'),
-      :id_number => '123abc'
+      :id_number => '123abc',
+      :party => 'Green'   
   }
 end

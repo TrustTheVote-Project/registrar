@@ -140,7 +140,7 @@ describe Registration do
   describe 'validations' do
 
     it 'should require the correct fields' do
-      [:first_name, :address, :city, :state, :zip, :date_of_birth].each do |field|
+      [:first_name, :address, :city, :state, :zip, :date_of_birth, :party].each do |field|
         invalid = Registration.new
         invalid.should_not be_valid
         invalid.errors.on(field).should_not be_nil
