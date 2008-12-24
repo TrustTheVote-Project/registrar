@@ -19,7 +19,7 @@
   <% for activity in @activities %>
     <tr>
       <td><%= activity.registration.name %></td>
-      <td><%= activity.registration.id_number %></td>
+      <td><%= !activity.registration.id_number.blank? ? activity.registration.id_number : '&nbsp;'%></td>
       <td><%= activity.registration_id %></td>
       <td><%= image_tag('form.jpeg')%></td>
       <td><%= activity.message || '&nbsp;'%></td>

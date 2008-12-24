@@ -4,6 +4,6 @@ class AddCountyToRegistrations < ActiveRecord::Migration
   end
 
   def self.down
-      remove_column :registrations, :id_number
+      remove_column :registrations, :county
   end
 end
