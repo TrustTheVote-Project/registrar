@@ -1,9 +1,30 @@
 <h1>Register to vote in the state of Jeffersonia</h1>
 <hr/>
 <p>
-  By registering to vote, you affirm that you are at least 18 years of age and that you have resided in the state of
-  Jeffersonia for at least 2 (two) years.
-</p>
-<p>Either:</p>
-<p><%= link_to 'Download and print form', '#'%>, or, if you live in Adams county, </p>
-<p><%= link_to 'Use online wizard',  step1_new_registration_citizens_path %></p>
+  Thank you for your interest in voter registration. The power of our democracy depends on participation from citizens
+    like you.</p>
+
+<p>To register to vote in Jeffersonia you must attest:
+    <ol><li>You are a citizen of the United States</li>
+        <li>You are a resident of Jeffersonia</li>
+        <li>You are at least 18 years of age</li>
+        <li>You are not currently serving a sentence or on parole for a felony conviction</li>
+    </ol>
+
+
+<p>To expedite filling out your voter registration form, please have at hand the name of the county in which you live
+    and your Jeffersonia driver's license number. If you do not have a Jeffersonia driver's license, you may use the
+    last four digits of your Social Security Number as an identifying number. If you do not have a Social Security
+    Number or do not wish to use it as an identifying number, you may elect to have the county Board of Elections for
+    your county assign you an identification number, but be aware this may cause delays in the processing of your
+    application.</p>
+
+<p>To register to vote you must submit an <em>original signed form</em> to the county Board of Elections for your
+    county. If you live in Adams, Polk, or Roosevelt county, you may also participate in our validation and
+    accountability program for voter registrations. Your form will be electronically validated and the progress of
+    your registration request will be availbale to you via our website. It is not required that you participate, and
+    your participation in the program will not affect the approval or rejection of your application.</p>
+<h3>Next Step:</h3>
+<p><%= link_to 'Download the voter registration form', '#'%>, print it out, complete the form, and mail it.</p>
+<p>Or, if you live in Adams, Polk, or Roosevelt counties, you may use our <%= link_to 'online validation and tracking',
+    step1_new_registration_citizens_path %> for voter registrations.</p>
