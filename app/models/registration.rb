@@ -41,6 +41,9 @@ class Registration < ActiveRecord::Base
   validates_presence_of :state
   validates_presence_of :zip
   validates_presence_of :date_of_birth
+  validates_presence_of :id_number, :if => Proc.new {|r| !r.decline_to_state_id_number? }
+  validates_format_of :id_number, :with => /^$/, :if => Proc.new {|r| r.decline_to_state_id_number?}
+
 
   def add_activity(message, set_clerk = true)
     activities.create(
