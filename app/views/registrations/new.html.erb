@@ -1,8 +1,8 @@
-<h1>STEP 1: Please fill out the following form.</h1>
+<h1>STEP 1: Fill out the Voter Registration Form</h1>
 
 <% form_for(@registration, :url => step1_create_registration_citizens_path) do |f| %>
   <%= render :partial => 'registrations/form', :locals => {:f => f} %>
   <p>
-    <%= f.submit "Next >>" %>
+    <%= f.submit "Continue to Step 2: Review" %>
   </p>
 <% end %>
