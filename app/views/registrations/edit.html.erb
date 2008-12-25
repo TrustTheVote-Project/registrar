@@ -3,6 +3,6 @@
 <% form_for(@registration, :url => step1_update_registration_citizens_path(@registration)) do |f| %>
   <%= render :partial => 'registrations/form', :locals => {:f => f} %>
  <p>
-    <%= f.submit "Next >>" %>
+    <%= f.submit "Return to Step 2: Review" %>
   </p>
 <% end %>

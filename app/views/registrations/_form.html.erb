@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td>
-      <%= f.label :address %><br />
+      <%= f.label :street_address %><br />
       <%= f.text_field :address %>
     </td>
     <td>
@@ -32,33 +32,47 @@
   </tr>
   <tr>
     <td>
+      <%= f.label :county %><br />
+      <%= f.hidden_field :county, :value => 'Adams' %>Adams
+    </td>
+    <td>
       <%= f.label :state %><br />
-      <%= f.text_field :state %>
+      <%= f.hidden_field :state, :value => 'JA' %>JA
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :phone %><br />
+      <%= f.text_field :phone %>
     </td>
     <td>
       <%= f.label :zip %><br />
-      <%= f.text_field :zip %>
+      <%= f.select :zip, ['456780', '456781', '456782'] %>
     </td>
   </tr>
   <tr>
     <td>
       <%= f.label :date_of_birth %><br />
-      <%= f.date_select :date_of_birth, :start_year => 1900, :include_blank => true %>
+      <%= f.date_select :date_of_birth, :start_year => 1900, :end_year => 1991, :include_blank => true %>
     </td>
     <td>
-      <%= f.label :phone %><br />
-      <%= f.text_field :phone %>
+      <%= f.label :party %><br />
+      <%= f.select :party, ['Decline to State', 'American Independent', 'Democratic', 'Green', 'Libertarian', 'Natural Law', 'Peace and Freedom', 'Republican', 'Democratic'], :include_blank => true %>
     </td>
   </tr>
   <tr>
     <td>
-      <%= f.label :party %><br />
-      <%= f.text_field :party %>
+      <%= f.label :id_number %>*<br />
+      <%= f.text_field :id_number %>
     </td>
     <td>
-      <%= f.label :id_number %><br />
-      <%= f.text_field :id_number %>
+      <%= f.check_box :decline_to_state_id_number, :value => true %>Decline to state
     </td>
   </tr>
 
 </table>
+<p>* You may use your State of Jeffersonia Driver's License number as your identification number. If you do not have a
+    Jeffersonia Driver's License or do not wish to use it as your identificion number, you may use the last four digits
+    of your Social Security number. If you do not have or do not wish to use your Driver's License number or the
+    last four digits of your Social Security number, you may leave this field blank and the county BOE will assign an
+    identification number to you. This may cause delays in the processing of your voter registration application.

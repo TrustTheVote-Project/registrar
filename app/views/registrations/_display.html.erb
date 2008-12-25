@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td>ID: <%= @registration.id%></td>
-    <td></td>
+    <td>&nbsp;</td>
   </tr>
   <tr>
     <td>
@@ -37,6 +37,14 @@
   </tr>
   <tr>
     <td>
+      County: <%= h @registration.county %>
+    </td>
+    <td>
+      &nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td>
       Date of birth: <%= h @registration.date_of_birth %>
     </td>
     <td>
@@ -48,7 +56,7 @@
       Party: <%= h @registration.party %>
     </td>
     <td>
-      ID number: <%= h @registration.id_number %>
+      ID number: <%= h @registration.id_number %> <%= @registration.decline_to_state_id_number? ? '(decline to state)' : ''%>
     </td>
   </tr>
 </table>
