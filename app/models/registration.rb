@@ -7,17 +7,16 @@ class Registration < ActiveRecord::Base
   attr_accessor :activity_comment
 
   state :draft
-  state :submitted, :enter => Proc.new {|r| r.add_activity('Registration form has not yet arrived in the mail.
-    Next Step: After your signed original voter registration form is received at the Adams County Board of Elections,
-    the processing of your voter registration request will begin.', false)}
-  state :received, :enter => Proc.new {|r| r.add_activity('Registration form received from the USPS.
+  state :submitted, :enter => Proc.new {|r| r.add_activity('Registration form validated.
+    Next Step: Your signed original voter registration form must be received at the Adams County Board of Elections.', false)}
+  state :received, :enter => Proc.new {|r| r.add_activity('Registration form received.
     Next Step: A registration clerk should begin the processing of your form shortly.')}
   state :rejected, :enter => Proc.new {|r| r.add_activity('Registration form rejected due to inadequate or missing signature.
-    Next Step: Your request cannot be processed further because it did not contain a valid signature. Please print and
-    properly sign your registration form and resubmit it to the Adams Country Board of Elections.')}
-  state :approved, :enter => Proc.new {|r| r.add_activity('Registration form validated, awaiting approval.
-    Next Step: Your request form and signature have been accepted. Your voter registration request is pending
-    completion of a cross-check of your information with the Department of Motor Vehicles.')}
+    Next Step: Your request cannot be processed because it did not contain a valid signature. Please print and
+    properly sign your registration form and resubmit it.')}
+  state :approved, :enter => Proc.new {|r| r.add_activity('Registration form validated, awaiting DMV approval.
+    Next Step: Your form and signature have been accepted. Your voter registration request is pending
+    completion of a cross-check with the Department of Motor Vehicles.')}
 
   event :submit do
     transitions :to => :submitted, :from => :draft
