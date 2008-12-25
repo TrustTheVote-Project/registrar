@@ -1,0 +1,6 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'registration' %>
+<% end %>
+<% @box_title = "Register to Vote" %>
+<% step = params[:action] !~ /step/ ? 'step1' : params[:action] %>
+<%= image_tag("steps/#{step}.png") %>

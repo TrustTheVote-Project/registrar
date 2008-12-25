@@ -1,0 +1,8 @@
+label {
+  float: left;
+  width: 10em;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
