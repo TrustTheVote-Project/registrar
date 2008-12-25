@@ -7,7 +7,7 @@
 <br>
 <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
   <%= hidden_field :transition, 'approve' %>
-  <%= submit_tag 'Approve' %>
+  <%= submit_tag 'Assert Valid Voter Registration Form Received' %>
 <% end %>
 OR:
 <% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "Registration.buildComment()") do %>
@@ -19,7 +19,7 @@ OR:
   <%= text_area_tag :text_comment %>
   <%= hidden_field_tag :comment %>
   <br/><br/>
-  <%= submit_tag 'Reject' %>
+  <%= submit_tag 'Reject Voter Registration Form' %>
 <% end %>
 
 
