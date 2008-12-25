@@ -1,0 +1,41 @@
+#yui-main .yui-b {
+  background-color: transparent;
+}
+
+.section {
+  background: white;
+  height: 24em;
+}
+
+.section h3 {
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+  background-color: #E0E0E0;
+  color: #1E4D75;
+  font-weight: normal;
+}
+
+.section ul li {
+  list-style: none;
+  font-size: 123.1%;
+  margin-bottom: 1em;
+}
+
+.featured {
+  background-color: #11395E;
+}
+
+.featured a {
+  color: #B4C4D1;
+}
+
+.featured ul {
+  margin-top: 1.5em;
+  margin-left: 1.5em;
+}
+
+.featured ul li {
+  font-size: 108%;
+  margin-bottom: 0.75em;
+}

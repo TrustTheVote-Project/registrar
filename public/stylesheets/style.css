@@ -1,7 +1,93 @@
+/* This is styling on top of Yahoo User Interface's (YUI) Reset-Fonts-Grids and Base CSS packages */
 .notice {
   color: green
 }
 
 .error {
   color: red
+}
+
+html {
+  background: #1E4D75 url( /images/background.png ) no-repeat; /* Background Blue */
+}
+
+a {
+  text-decoration: none;
+  color: #1E4D75;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#doc2 {
+  margin-left: 50px;
+}
+
+#hd {
+  position: relative;
+  height: 200px;
+}
+
+#hd a {
+  color: white;
+}
+
+#hd ul {
+  position: absolute;
+  top: 106px;
+  right: 0;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+#hd ul li {
+  list-style: none;
+  float: left;
+  margin: none;
+  border-right: 1px solid #55748D;
+  padding: 0;
+}
+
+#hd ul li a img {
+  padding: 12px 20px;
+}
+
+#hd ul li.first {
+  border-left: 1px solid #55748D;
+}
+
+#yui-main .yui-b {
+  background-color: white;
+  padding: 1em;
+}
+
+#bd {
+}
+
+#bd h1, #bd h2, #bd h3 {
+  margin-top: 0;
+}
+
+#ft {
+  text-align: center;
+  margin-top: 2em;
+  border-top: 1px solid #B4C4D1;
+  padding: 1em 0;
+}
+
+#ft a {
+  color: #B4C4D1; /* Off White */
+  font-size: 85%;
+  padding: 0 1em;
+}
+
+#box_title {
+  background-color: #2E6090;
+  color: #B4C4D1;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
 }
