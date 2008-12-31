@@ -140,37 +140,13 @@ describe Registration do
   describe 'validations' do
 
     it 'should require the correct fields' do
-      [:first_name, :address, :city, :state, :zip, :date_of_birth, :party].each do |field|
+      [:first_name, :address, :city, :state, :zip, :date_of_birth, :party, :id_number].each do |field|
         invalid = Registration.new
         invalid.should_not be_valid
         invalid.errors.on(field).should_not be_nil
       end
     end
 
-    it 'should require an ID number if not declining to state ID number' do
-      invalid = Registration.new
-      invalid.should_not be_decline_to_state_id_number
-
-      invalid.should_not be_valid
-      invalid.errors.on(:id_number).should_not be_nil
-    end
-
-    it 'should not require an ID number if declining to state ID number' do
-      invalid = Registration.new
-      invalid.decline_to_state_id_number = true
-
-      invalid.valid?
-      invalid.errors.on(:id_number).should be_nil
-    end
-
-    it 'should not allow an ID number if declining to state ID number' do
-      invalid = Registration.new
-      invalid.decline_to_state_id_number = true
-      invalid.id_number = '1234'
-
-      invalid.should_not be_valid
-      invalid.errors.on(:id_number).should_not be_nil
-    end
   end
 
 end

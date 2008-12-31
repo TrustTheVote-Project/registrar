@@ -4,6 +4,6 @@ class AddDeclineToStateIdNumber < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :registration, :decline_to_state_id_number
+    remove_column :registrations, :decline_to_state_id_number
   end
 end

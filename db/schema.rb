@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081224222356) do
+ActiveRecord::Schema.define(:version => 20081231194022) do
 
   create_table "registration_activities", :force => true do |t|
     t.integer  "registration_id"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(:version => 20081224222356) do
     t.string   "status"
     t.string   "id_number"
     t.string   "county"
-    t.boolean  "decline_to_state_id_number"
   end
 
   create_table "sessions", :force => true do |t|
