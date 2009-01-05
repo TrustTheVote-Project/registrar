@@ -1,0 +1,18 @@
+john_adams:
+  id: 1
+  salutation: Mr.
+  first_name: John
+  middle_name: Quincy
+  last_name: Adams
+  address: 123 Main St
+  city: Monticello
+  state: Jeffersonia
+  zip: 71776
+  county: Thomas
+  date_of_birth: 1/1/1950
+  phone: 111-555-1234
+  party: Jeffersonian
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  status: received
+  id_number: 1

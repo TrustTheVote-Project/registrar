@@ -1,0 +1,9 @@
+john_adams_step1:
+  registration_id: 1
+  message: I like to vote
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  clerk_id: 2
+  comment: Vote
+  location: Here
+  ip_address: 192.168.17.76
