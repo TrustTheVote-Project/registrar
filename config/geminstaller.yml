@@ -16,7 +16,7 @@
 #     No Gems
 #
 defaults:
-  install_options: --include-dependencies
+  install_options: --no-ri --no-rdoc
 gems:
 - name: rails
   version: 2.2.2
@@ -24,6 +24,7 @@ gems:
   version: >= 2.5.0
 - name: engineyard-eycap
   version: 0.3.11
+  install_options: --source=http://gems.rubyforge.org --source=http://gems.github.com
 - name: geminstaller
   version: 0.4.5
 - name: rails
