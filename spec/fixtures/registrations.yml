@@ -9,10 +9,10 @@ john_adams:
   state: Jeffersonia
   zip: 71776
   county: Thomas
-  date_of_birth: 1/1/1950
+  date_of_birth: 01-01-1976
   phone: 111-555-1234
   party: Jeffersonian
-  created_at: <%= Time.now %>
-  updated_at: <%= Time.now %>
+  created_at: <%= Time.now.to_s(:db) %>
+  updated_at: <%= Time.now.to_s(:db) %>
   status: received
-  id_number: 1
+  id_number: "1"
