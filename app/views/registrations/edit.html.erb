@@ -1,5 +1,7 @@
 <h1>Modify registration</h1>
 
+<p>Please make sure your information is correct and then click the button marked "Return to Step 2: Review"</p>
+
 <% form_for(@registration, :url => step1_update_registration_citizens_path(@registration)) do |f| %>
   <%= render :partial => 'registrations/form', :locals => {:f => f} %>
  <p>

@@ -1,6 +1,8 @@
 <%= render :partial => 'registrations/citizens/wizard' %>
 <h1>STEP 1: Fill out the Voter Registration Form</h1>
 
+<p>Fill in your information and then click the button marked "Continue to Step 2: Review"</p>
+
 <% form_for(@registration, :url => step1_create_registration_citizens_path, :class => 'voter_registration') do |f| %>
   <%= render :partial => 'registrations/form', :locals => {:f => f} %>
   <p>

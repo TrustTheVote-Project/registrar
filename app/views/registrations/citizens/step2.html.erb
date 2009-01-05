@@ -1,10 +1,11 @@
 <%= render :partial => 'registrations/citizens/wizard' %>
 <h1>STEP 2: Please review your registration</h1>
 
-<p> Review the details of your voter registration submission to make sure all the information is correct.</p>
+<p>Review the details of your voter registration submission to make sure all the information is correct.</P>
+<p>When you are finished, click the button marked "Continue to Step 3: Print & Sign"</p>
 
 <%= render :partial => 'registrations/display' %>
 
-<h2>If you need to make changes, <%= link_to 'click here',  step1_edit_registration_citizens_path(@registration) %>. Otherwise:</h2>
+<h2>This information is incorrect and I need to <%= link_to 'make changes',  step1_edit_registration_citizens_path(@registration) %>.</h2>
 
-<%= button_to "Continue to Step 3: Print & Sign", step3_registration_citizens_path(@registration), :method => :get %>
+<h2>This information is correct and I am ready to </h2><%= button_to "Continue to Step 3: Print & Sign", step3_registration_citizens_path(@registration), :method => :get %>
