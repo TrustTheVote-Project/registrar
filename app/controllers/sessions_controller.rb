@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  layout 'clerk'
+  layout 'login'
   include AuthenticatedSystem
 
   def new

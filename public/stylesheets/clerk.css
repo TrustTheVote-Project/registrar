@@ -1,0 +1,104 @@
+
+.dim {
+  color: #d9d9d9;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+html {
+  background: white url(/images/clerk-gradient.png) top left repeat-x fixed;
+}
+
+#doc2 {
+  border-color: white;
+  border-style: solid;
+  border-width: 0 22px;
+  background: white url(/images/clerk-bg.png) top left no-repeat scroll;
+}
+
+#hd {
+  color: #666666;
+  position: relative;
+  height: 90px;
+}
+
+#hd h1 {
+  margin: 0 330px;
+  color: #666666;
+  font-size: 204%;
+  font-weight: normal;
+  line-height: 4em;
+}
+
+#hd a {
+  color: #666666;
+}
+
+#hd .right {
+  float: right;
+  padding-top: 22px;
+}
+
+#hd .right p {
+  margin: 0 0 10px 0;
+}
+
+img.search {
+  margin: 0 0 0 4px;
+  border: 1px solid black;
+  padding: 1px 120px 1px 1px;
+}
+
+#yui-main .yui-b {
+  background-color: white;
+  padding: 1em;
+}
+
+div.login {
+  margin: 57px 0 0 183px;
+  border: 1px solid black;
+  width: 530px;
+  height: 255px;
+  background-color: white;
+}
+
+div.login h2 {
+  margin: 0 0 48px 0;
+  padding: 5px 0 8px 12px;
+  color: black;
+  background-color: #edeee8;
+  font-size: 108%;
+  font-weight: bold;
+}
+
+div.login p {
+  overflow: hidden;
+  padding-left: 75px;
+}
+
+div.login label {
+  float: left;
+  width: 75px;
+  padding-top: 4px;
+}
+
+div.login input {
+  margin-left: 0;
+  border: 1px solid black;
+  width: 228px;
+  height: 20px;
+}
+
+div.login p.button {
+  padding: 30px 0 0 360px;
+}
+
+div.login p.button input {
+  width: 100px;
+  height: 35px;
+  color: white;
+  background-color: black;
+}

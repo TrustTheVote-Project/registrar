@@ -1,33 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <title>State of Jeffersonia's Intranet</title>
+  <title>Adams County Employee Intranet</title>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/2.6.0/build/reset-fonts-grids/reset-fonts-grids' %>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/2.6.0/build/base/base' %>
+  <%= stylesheet_link_tag 'clerk' %>
   <%= javascript_include_tag :defaults %>
+  <%= yield :head %>
 </head>
 <body>
-<div style="background-color:coral;">
-  State of Jeffersonia's Intranet<br>
-  <%= link_to "home", home_path %>
-</div>
-
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
-<% if flash[:error] %>
-  <div class="error"><%= flash[:error] %></div>
-<% end %>
-
-<%= yield %>
-<div style="position:absolute; top:5px; right:5px; background-color:white; border: 1px solid black; padding: 5px;">
-  <% if logged_in? %>
-    Welcome, <%= current_user.name %>
-    <br>
-    <%= link_to "log out", logout_path %>
-    <br>
-  <% end %>
-  <%= image_tag('/images/osdv.jpg') %>
-  <br>
-  <br>
-  <%= image_tag('/images/powered_by_pivotal.gif') %>
-</div>
+  <div id="doc2" class="yui-t2">
+    <div id="hd">
+      <% if logged_in? %>
+        <div class="right">
+          <p>Welcome, <%= current_user.name %> <span class="dim">|</span> <%= link_to "log out", logout_path %></p>
+          <p>Search <%= image_tag("search-icon.png", :class => "search") %></p>
+        </div>
+      <% end %>
+      <h1>Employee Intranet</h1>
+    </div>
+    <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b">
+          <% if flash[:notice] %>
+            <div class="notice"><%= flash[:notice] %></div>
+          <% end %>
+          <% if flash[:error] %>
+            <div class="error"><%= flash[:error] %></div>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+      <div class="yui-b">
+        <ul>
+          <li>Home</li>
+          <li>What's New</li>
+          <li>Bulletin Board</li>
+          <li>Department Calendars</li>
+          <li>Documents/Forms</li>
+          <li>IT Assistance</li>
+          <li>Information Systems</li>
+          <li>Issue Tracking</li>
+          <li>Click 4 Gov</li>
+          <li>Directory</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
