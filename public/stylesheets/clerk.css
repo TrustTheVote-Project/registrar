@@ -93,22 +93,24 @@ div.login label {
   padding-top: 4px;
 }
 
-div.login input {
+input[type=text], input[type=password] {
   margin-left: 0;
+  margin-right: 45px;
   border: 1px solid black;
-  width: 228px;
   height: 20px;
+  width: 228px;
 }
 
 div.login p.button {
   padding: 30px 0 0 360px;
 }
 
-div.login p.button input {
+div.login input[type=submit] {
   width: 100px;
-  height: 35px;
+  height: 36px;
   color: white;
   background-color: black;
+  border: none;
 }
 
 #bd.login_bd {
@@ -135,6 +137,7 @@ div.login p.button input {
 .yui-t2 #yui-main .yui-b {
   margin-left: 180px;
   padding: 0;
+  font-size: 108%;
 }
 
 #yui-main .yui-b ul li {
@@ -143,6 +146,20 @@ div.login p.button input {
   font-size: 189%;
   font-weight: normal;
 }
+
+#inner {
+  padding-left: 2em;
+}
+
+input.clerk_button {
+  width: 100px;
+  height: 36px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 100%;
+}
+
 
 div.subtitle {
   margin-bottom: 2em;

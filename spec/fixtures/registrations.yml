@@ -14,5 +14,5 @@ john_adams:
   party: Jeffersonian
   created_at: <%= Time.now.to_s(:db) %>
   updated_at: <%= Time.now.to_s(:db) %>
-  status: received
+  status: submitted
   id_number: "1"
