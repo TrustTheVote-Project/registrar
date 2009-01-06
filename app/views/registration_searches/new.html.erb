@@ -1,13 +1,12 @@
-<h1>STEP 1: Find registration by ID</h1>
-
-<% form_tag(registration_searches_path) do %>
-  Registration Tracking ID: <%= text_field_tag(:registration_id)%>
-  <%= submit_tag 'Find' %>
-<% end%>
-
-
-<div style="position:absolute; bottom: 100px">
-  <% form_tag(receive_submitted_registrations_path, :method => :put) do %>
-    <%=submit_tag "Receive incoming registrations from mailbox"%>
-  <% end %>
+<% content_for :subtitle do %>
+  Locate registration by ID
+<% end %>
+<div id="inner">
+  <% form_tag(registration_searches_path) do %>
+    <p><%= label_tag :registration_id, "Registration Tracking ID:" %></p>
+    <p>
+      <%= text_field_tag(:registration_id)%>
+      <%= submit_tag 'Find', :class => "clerk_button", :style => "width: 100px" %>
+    </p>
+  <% end%>
 </div>

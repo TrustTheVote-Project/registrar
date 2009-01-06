@@ -19,6 +19,7 @@ body {
 
 #doc2 {
   height: 100%;
+  width: 69.5em;
   border-color: white;
   border-style: solid;
   border-width: 0 22px;
@@ -92,22 +93,24 @@ div.login label {
   padding-top: 4px;
 }
 
-div.login input {
+input[type=text], input[type=password] {
   margin-left: 0;
+  margin-right: 45px;
   border: 1px solid black;
-  width: 228px;
   height: 20px;
+  width: 228px;
 }
 
 div.login p.button {
   padding: 30px 0 0 360px;
 }
 
-div.login p.button input {
+div.login input[type=submit] {
   width: 100px;
-  height: 35px;
+  height: 36px;
   color: white;
   background-color: black;
+  border: none;
 }
 
 #bd.login_bd {
@@ -115,4 +118,100 @@ div.login p.button input {
   border-bottom: 70px solid #e3e4db;
   width: 907px;
 }
-/*#e3e4db*/
+
+#bd > .yui-b {
+  overflow: hidden;
+  background: #e3e4db url(/images/clerk-bg.png) 0 -90px no-repeat scroll;
+  min-height: 38em;
+  padding-top: 1em;
+}
+
+#bd > .yui-b ul li {
+  list-style: none;
+  margin-top: 1.25em;
+  color: #333333;
+  font-size: 93%;
+  font-weight: bold;
+}
+
+.yui-t2 #yui-main .yui-b {
+  margin-left: 180px;
+  padding: 0;
+  font-size: 108%;
+}
+
+#yui-main .yui-b ul li {
+  list-style: none;
+  margin: 1em;
+  font-size: 189%;
+  font-weight: normal;
+}
+
+#inner {
+  padding-left: 2em;
+}
+
+input.clerk_button {
+  width: 100px;
+  height: 36px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 100%;
+}
+
+
+div.subtitle {
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  background-color: #e3e4db;
+  color: #333333;
+  font-size: 182%;
+  font-weight: normal;
+}
+
+#receive_registrations_button {
+  float: right;
+}
+
+.zebra {
+  width: 100%;
+}
+
+.zebra td {
+  border: none;
+  padding-left: 2em;
+}
+
+.zebra .even {
+  background-color: #edeee8;
+}
+
+.text_and_button {
+  margin: 1em 2em;
+}
+
+.text_and_button span {
+  float: left;
+  width: 360px;
+  color: #333333;
+  font-size: 182%;
+  font-weight: normal;
+}
+
+.text_and_button input[type=submit] {
+  width: 165px;
+  height: 36px;
+  border: none;
+  color: white;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.red_button {
+  background-color: #990000;
+}
+
+.green_button {
+  background-color: #006600;
+}

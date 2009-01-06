@@ -1,10 +1,19 @@
-<h1>
-  STEP 2: Please review the registration received in the mail with these data.
-</h1>
+<% content_for :subtitle do %>
+  Review the registration received in the mail with these data:
+<% end %>
 
 <%= render :partial => '/registrations/display' %>
 
-<%= button_to "This is not the correct record - search again", new_registration_search_path, :method => :get %>
+<% form_tag(new_registration_search_path, :method => :get) do %>
+  <p class="text_and_button">
+    <span>This is not the correct record</span>
+    <%= submit_tag 'Search Again', :class => "red_button" %>
+  </p>
+<% end %>
 
-<%= button_to "This is the correct record - proceed to Scan", step3_registration_clerks_path(@registration), :method => :get %>
-
+<% form_tag(step3_registration_clerks_path(@registration), :method => :get) do %>
+  <p class="text_and_button">
+    <span>This is the correct record</span>
+    <%= submit_tag 'Proceed to Scan', :class => "green_button" %>
+  </p>
+<% end %>

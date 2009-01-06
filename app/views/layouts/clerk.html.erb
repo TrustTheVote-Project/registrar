@@ -22,6 +22,7 @@
     <div id="bd">
       <div id="yui-main">
         <div class="yui-b">
+          <div class="subtitle"><%= yield :subtitle %></div>
           <% if flash[:notice] %>
             <div class="notice"><%= flash[:notice] %></div>
           <% end %>
