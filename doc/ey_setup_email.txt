@@ -1,0 +1,46 @@
+--- ABOUT YOUR DEPLOYMENT ---
+
+You have 1 production and 1 staging slice(s).
+
+--- SSH Information ---
+
+Your username and password is the same for all slices.
+
+ username      :  pass
+ -----------------------------
+ osdv      :  Sii7j59cnPy4
+
+Put this in ~/.ssh/config on your local computer to make connecting easy:
+------------cut--------------
+ ServerAliveInterval 60
+ ServerAliveCountMax 3
+
+# production
+
+ Host ey05-s00124
+   Hostname     65.74.186.4
+   Port         8124
+   HostKeyAlias ey05-s00124
+   User         osdv
+
+
+# staging
+
+ Host ey05-s00125
+   Hostname     65.74.186.4
+   Port         8125
+   HostKeyAlias ey05-s00125
+   User         osdv
+
+------------cut--------------
+
+Once that is in your ~/.ssh/config file then you can ssh to your slices like this:
+
+% ssh ey05-s00124
+
+--- Public Web Access ---
+Relevant IP information for accessing your website:
+Production: 65.74.185.81
+Staging: 65.74.185.82
+
+These are also the addresses you should use for A records if you control your own DNS.
