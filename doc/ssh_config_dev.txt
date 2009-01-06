@@ -1,0 +1,16 @@
+# osdv production - ey05-s00124
+
+Host osdv-production
+  Hostname     65.74.186.4
+  Port         8124
+  HostKeyAlias ey05-s00124
+  User         osdv
+
+
+# osdv staging - ey05-s00125
+
+Host osdv-staging
+  Hostname     65.74.186.4
+  Port         8125
+  HostKeyAlias ey05-s00125
+  User         osdv
