@@ -1,25 +1,32 @@
-<h1>
-  STEP 3: Please scan and upload the registration received in the mail.
-</h1>
-
-<div id='upload'>
-  <div>
-    <%= button_to_function "Scan & Upload Voter Registration Form" do |page|
-        page[:upload].visual_effect :slide_up
-        page[:after_upload].visual_effect :slide_down
-    end %>
+<% content_for :subtitle do %>
+  Please scan and upload the registration received in the mail
+<% end %>
+<div id="inner">
+  <div id='upload'>
+    <div>
+      <%= button_to_function "Scan and Upload Voter Registration Form", :class => "green_button", :style => "width: 310px" do |page|
+          page[:upload].visual_effect :slide_up
+          page[:after_upload].visual_effect :slide_down
+      end %>
+    </div>
   </div>
-</div>
 
 
-<div id="after_upload" style="display:none; height: 100px">
-  <div>
-    <img src="/images/form.jpeg">
-    <br>
-    <%= button_to_function "Incorrect scan - try again" do |page|
-        page[:upload].visual_effect :slide_down
-        page[:after_upload].visual_effect :slide_up
-    end %>
-    <%= button_to "Correct scan attached - proceed", step4_registration_clerks_path(@registration), :method => :get %>
+  <div id="after_upload" style="display:none; height: 500px">
+    <div>
+      <p><img src="/images/fake_scan.png"></p>
+      <div class="right">
+        <%= button_to_function "Incorrect scan - try again", :class => "red_button", :style => "width: 254px" do |page|
+          page[:upload].visual_effect :slide_down
+          page[:after_upload].visual_effect :slide_up
+        end %>
+      </div>
+      <div class="clear"></div>
+      <div class="right">
+        <%= button_to "Correct scan attached - proceed", step4_registration_clerks_path(@registration),
+                        :method => :get, :class => "green_button", :style => "width: 254px" %>
+      </div>
+      <div class="clear"></div>
+    </div>
   </div>
 </div>

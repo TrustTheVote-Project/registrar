@@ -17,8 +17,19 @@ body {
   height: 100%;
 }
 
+input[type=submit], input[type=button] {
+  width: 100px;
+  height: 36px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 100%;
+  cursor: pointer;
+}
+
 #doc2 {
   height: 100%;
+  min-height: 768px;
   width: 69.5em;
   border-color: white;
   border-style: solid;
@@ -105,14 +116,6 @@ div.login p.button {
   padding: 30px 0 0 360px;
 }
 
-div.login input[type=submit] {
-  width: 100px;
-  height: 36px;
-  color: white;
-  background-color: black;
-  border: none;
-}
-
 #bd.login_bd {
   background-color: #e3e4db;
   border-bottom: 70px solid #e3e4db;
@@ -122,8 +125,8 @@ div.login input[type=submit] {
 #bd > .yui-b {
   overflow: hidden;
   background: #e3e4db url(/images/clerk-bg.png) 0 -90px no-repeat scroll;
-  min-height: 38em;
   padding-top: 1em;
+  min-height: 45em;
 }
 
 #bd > .yui-b ul li {
@@ -201,17 +204,24 @@ div.subtitle {
 
 .text_and_button input[type=submit] {
   width: 165px;
-  height: 36px;
-  border: none;
-  color: white;
-  font-size: 100%;
-  cursor: pointer;
 }
 
 .red_button {
-  background-color: #990000;
+  background-color: #990000 !important;
 }
 
 .green_button {
-  background-color: #006600;
+  background-color: #006600 !important;
+}
+
+div.right {
+  float: right;
+}
+
+div.right input {
+  margin: 1em 5em 0 0;
+}
+
+div.clear {
+  clear: both;
 }
