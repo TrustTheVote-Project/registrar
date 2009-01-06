@@ -68,4 +68,7 @@ class Registration < ActiveRecord::Base
     first_name + (last_name ? " #{last_name.first}" : '')
   end
 
+  def full_address
+    "%s&nbsp;&nbsp;%s, %s&nbsp;&nbsp;%s" % [address, city, state, zip]
+  end
 end

@@ -1,62 +1,19 @@
-<table>
-  <tr>
-    <td>ID: <%= @registration.id%></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>
-      Salutation: <%= h @registration.salutation %>
-    </td>
-    <td>
-      First Name: <%= h @registration.first_name %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Middle Name: <%= h @registration.middle_name %>
-    </td>
-    <td>
-      Last Name: <%= h @registration.last_name %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Address: <%= h @registration.address %>
-    </td>
-    <td>
-      City: <%= h@registration.city %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      State: <%= h @registration.state %>
-    </td>
-    <td>
-      ZIP: <%= h @registration.zip %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      County: <%= h @registration.county %>
-    </td>
-    <td>
-      &nbsp;
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Date of birth: <%= h @registration.date_of_birth %>
-    </td>
-    <td>
-      Phone: <%= h @registration.phone %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Party: <%= h @registration.party %>
-    </td>
-    <td>
-      ID number: <%= h @registration.id_number %>
-    </td>
-  </tr>
+<% names_and_attributes = [
+    ['ID #', :id],
+    ['Salutation', :salutation],
+    ['Name', :name],
+    ['Address', :full_address],
+    ['County', :county],
+    ['Date of birth', :date_of_birth],
+    ['Phone', :phone],
+    ['Party', :party],
+    ['Tracking #', :id_number]
+  ] %>
+<table class="zebra">
+  <% names_and_attributes.each do |tuple| %>
+    <tr class="<%= cycle('even', 'odd') %>">
+      <td><%= tuple.first %>:</td>
+      <td><%= @registration.send(tuple.last) %></td>
+    </tr>
+  <% end %>
 </table>
