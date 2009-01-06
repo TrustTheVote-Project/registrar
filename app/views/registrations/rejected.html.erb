@@ -1,6 +1,6 @@
 <h1>
   <% if current_user %>
-    Thank you <%= current_user.name %> - the Voter Registration for <%= @registration.name %> with Tracking ID <%=@registration.id%> has been rejected.
+    Thank you <%= current_user.name %>, you have rejected the Voter Registration for <%= @registration.name %> with Tracking ID <%=@registration.id%>.
   <% else %>
     The Voter Registration for <%= @registration.abbreviated_name %> with Tracking ID <%=@registration.id%> has been rejected.
   <% end %>
