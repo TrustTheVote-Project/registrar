@@ -1,11 +1,9 @@
+<% content_for :subtitle do %>
+  <%= link_to image_tag("blank-button.png"), receive_submitted_registrations_path, :method => :put, :id => :receive_registrations_button %>
+  &nbsp;
+<% end %>
 <ul>
-  <li><%= link_to 'Process voter reqistration forms', new_registration_search_path %></li>
+  <li><%= link_to 'Process voter registration forms', new_registration_search_path %></li>
   <li><%= link_to 'Look up birth/death records', '#' %></li>
   <li><%= link_to 'Send a request to the DMV', '#' %></li>
 </ul>
-
-<div style="position:absolute; bottom: 100px">
-  <% form_tag(receive_submitted_registrations_path, :method => :put) do %>
-    <%=submit_tag "Receive incoming registrations from mailbox"%>
-  <% end %>
-</div>

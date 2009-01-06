@@ -19,6 +19,7 @@ body {
 
 #doc2 {
   height: 100%;
+  width: 69.5em;
   border-color: white;
   border-style: solid;
   border-width: 0 22px;
@@ -115,4 +116,43 @@ div.login p.button input {
   border-bottom: 70px solid #e3e4db;
   width: 907px;
 }
-/*#e3e4db*/
+
+#bd > .yui-b {
+  overflow: hidden;
+  background: #e3e4db url(/images/clerk-bg.png) 0 -90px no-repeat scroll;
+  min-height: 38em;
+  padding-top: 1em;
+}
+
+#bd > .yui-b ul li {
+  list-style: none;
+  margin-top: 1.25em;
+  color: #333333;
+  font-size: 93%;
+  font-weight: bold;
+}
+
+.yui-t2 #yui-main .yui-b {
+  margin-left: 180px;
+  padding: 0;
+}
+
+#yui-main .yui-b ul li {
+  list-style: none;
+  margin: 1em;
+  font-size: 189%;
+  font-weight: normal;
+}
+
+div.subtitle {
+  margin-bottom: 2em;
+  padding: 0.5em 1em;
+  background-color: #e3e4db;
+  color: #333333;
+  font-size: 182%;
+  font-weight: normal;
+}
+
+#receive_registrations_button {
+  float: right;
+}
