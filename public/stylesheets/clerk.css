@@ -9,10 +9,16 @@ a {
 }
 
 html {
+  height: 100%;
   background: white url(/images/clerk-gradient.png) top left repeat-x fixed;
 }
 
+body {
+  height: 100%;
+}
+
 #doc2 {
+  height: 100%;
   border-color: white;
   border-style: solid;
   border-width: 0 22px;
@@ -55,6 +61,7 @@ img.search {
 #yui-main .yui-b {
   background-color: white;
   padding: 1em;
+  height: 300px;
 }
 
 div.login {
@@ -102,3 +109,10 @@ div.login p.button input {
   color: white;
   background-color: black;
 }
+
+#bd.login_bd {
+  background-color: #e3e4db;
+  border-bottom: 70px solid #e3e4db;
+  width: 907px;
+}
+/*#e3e4db*/
