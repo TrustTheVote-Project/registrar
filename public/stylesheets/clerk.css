@@ -205,13 +205,28 @@ div.subtitle {
   float: right;
 }
 
+#scan {
+  float: right;
+  position: relative;
+  width: 342px;
+  height: 202px;
+  padding: 0 0 14px 14px;
+  background-color: white;
+}
+
+#scan img {
+  width: 340px;
+  height: 200px;
+  border: 1px solid black;
+}
+
 .zebra {
   width: 100%;
 }
 
 .zebra td {
   border: none;
-  padding-left: 2em;
+  padding: 5px 0 4px 2em;
 }
 
 .zebra .even {
@@ -238,22 +253,22 @@ div.subtitle {
   width: 90px;
 }
 
-.step_4 .two_column span {
-  float: left;
-  margin-left: 2em;
+.step_4 .yui-g {
+  padding: 2em 0 0 2em;
 }
 
-.step_4 .two_column select {
+.step_4 select {
   width: 11.25em;
 }
 
-.step_4 .two_column textarea {
+.step_4 textarea {
   width: 21.25em;
 }
 
-.step_4 .two_column p.textarea_label {
+.step_4 p.textarea_label {
   margin-bottom: 0;
 }
+
 
 .red_button {
   background-color: #990000 !important;
