@@ -269,6 +269,22 @@ div.subtitle {
   margin-bottom: 0;
 }
 
+#registration {
+  text-align: center;
+}
+
+#registration h4 {
+  color: #333333;
+  font-size: 138.5%;
+  margin: 2em;
+}
+
+#registration p {
+  color: #9b351f;
+  font-size: 153.9%;
+  margin: 0.5em;
+}
+
 
 .red_button {
   background-color: #990000 !important;
