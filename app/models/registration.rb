@@ -71,4 +71,8 @@ class Registration < ActiveRecord::Base
   def full_address
     "%s&nbsp;&nbsp;%s, %s&nbsp;&nbsp;%s" % [address, city, state, zip]
   end
+
+  def city_state_zip
+    "%s, %s&nbsp;&nbsp;%s" % [city, state, zip]
+  end
 end

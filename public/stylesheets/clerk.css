@@ -206,20 +206,24 @@ div.subtitle {
   width: 165px;
 }
 
-.step_4_two_column span {
+.step_4 .zebra td.label {
+  width: 90px;
+}
+
+.step_4 .two_column span {
   float: left;
   margin-left: 2em;
 }
 
-.step_4_two_column select {
+.step_4 .two_column select {
   width: 11.25em;
 }
 
-.step_4_two_column textarea {
+.step_4 .two_column textarea {
   width: 21.25em;
 }
 
-.step_4_two_column p.textarea_label {
+.step_4 .two_column p.textarea_label {
   margin-bottom: 0;
 }
 

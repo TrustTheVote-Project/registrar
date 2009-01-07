@@ -1,9 +1,10 @@
 <h1>STEP 4: Please approve or reject this registration.</h1>
 <hr />
+<div class="step_4">
 <%= render :partial => '/registrations/display' %>
 <img src="/images/form.jpeg"/>
 <hr />
-<div class="step_4_two_column">
+<div class="two_column">
 <span>
     <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
       <%= hidden_field :transition, 'approve' %>
@@ -27,6 +28,7 @@ OR:
     <%= submit_tag 'Reject Voter Registration Form', :class => "red_button", :style => "width: 296px" %>
   </p>
 <% end %>
+</div>
 </div>
 </div>
 
