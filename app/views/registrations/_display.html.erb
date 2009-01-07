@@ -1,5 +1,5 @@
 <% names_and_attributes = [
-    ['ID #:', :id],
+    ['Tracking #:', :id_number],
     ['Salutation:', :salutation],
     ['Name:', :name],
     ['Address:', :address],
@@ -8,7 +8,7 @@
     ['Date of birth:', :date_of_birth],
     ['Phone:', :phone],
     ['Party:', :party],
-    ['Tracking #:', :id_number]
+    ['Citizen ID #:', :id]
   ] %>
 <table class="zebra">
   <% names_and_attributes.each do |tuple| %>

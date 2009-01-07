@@ -93,12 +93,12 @@ div.login h2 {
   font-weight: bold;
 }
 
-div.login p {
+div.login p, #form_container p {
   overflow: hidden;
   padding-left: 75px;
 }
 
-div.login label {
+div.login label, #form_container label {
   float: left;
   width: 75px;
   padding-top: 4px;
@@ -112,7 +112,7 @@ input[type=text], input[type=password], select {
   width: 228px;
 }
 
-div.login p.button {
+div.login p.button, #form_container p.button {
   padding: 30px 0 0 360px;
 }
 
@@ -185,6 +185,7 @@ div.subtitle {
   font-size: 138.5%;
   font-weight: normal;
   margin-left: 1.5em;
+  margin-bottom: 2em;
 }
 
 .subtitle a, .subtitle .step {
@@ -249,7 +250,7 @@ div.subtitle {
   width: 165px;
 }
 
-.step_4 .zebra td.label {
+.zebra td.label {
   width: 90px;
 }
 

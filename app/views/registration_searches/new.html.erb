@@ -3,14 +3,11 @@
   <div class="step"><p>Step 1</p></div>
 <% end %>
 
-<h3>Locate registration by ID</h3>
+<h3>Locate registration by Tracking Number</h3>
 
-<div id="inner">
+<div id="form_container">
   <% form_tag(registration_searches_path) do %>
-    <p><%= label_tag :registration_id, "Registration Tracking ID:" %></p>
-    <p>
-      <%= text_field_tag(:registration_id)%>
-      <%= submit_tag 'Find', :class => "clerk_button", :style => "width: 100px" %>
-    </p>
+    <p><%= label_tag :registration_id, "Tracking #:" %> <%= text_field_tag(:registration_id)%></p>
+    <p class="button"><%= submit_tag 'Find', :class => "clerk_button", :style => "width: 100px" %></p>
   <% end%>
 </div>

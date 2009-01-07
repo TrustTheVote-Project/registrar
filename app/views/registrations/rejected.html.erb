@@ -9,6 +9,6 @@
   <% end %>
   <p>Voter Registration for</p>
   <p><%= current_user ? @registration.name : @registration.abbreviated_name %></p>
-  <p>with Tracking ID: <%=@registration.id%></p>
-  <p>has been rejected</p>
+  <p>with Tracking #<%=@registration.id%></p>
+  <p>has been rejected.</p>
 </div>
