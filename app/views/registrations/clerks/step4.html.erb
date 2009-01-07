@@ -1,27 +1,34 @@
 <h1>STEP 4: Please approve or reject this registration.</h1>
-<hr>
+<hr />
 <%= render :partial => '/registrations/display' %>
-<img src="/images/form.jpeg">
-<hr>
-<br>
-<br>
-<% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
-  <%= hidden_field :transition, 'approve' %>
-  <%= submit_tag 'Assert Valid Voter Registration Form Received' %>
-<% end %>
+<img src="/images/form.jpeg"/>
+<hr />
+<div class="step_4_two_column">
+<span>
+    <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
+      <%= hidden_field :transition, 'approve' %>
+      <%= submit_tag 'Assert Valid Voter Registration Form Received', :class => "green_button", :style => "width: 296px" %>
+    <% end %>
+</span>
+<div class="right">
 OR:
 <% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "Registration.buildComment()") do %>
   <%= hidden_field :transition, 'reject' %>
-  Reason for Rejection:
-  <%= select_tag    :reason, options_for_select(['', 'Illegible', 'Incomplete', 'Signature Missing', 'Other'], '') %>
-  <br/>
-  Comment:
+  <p>
+    Reason for Rejection:
+    <%= select_tag    :reason, options_for_select(['', 'Illegible', 'Incomplete', 'Signature Missing', 'Other'], '') %>
+  </p>
+  <p class="textarea_label">
+    Comment:
+  </p>
   <%= text_area_tag :text_comment %>
   <%= hidden_field_tag :comment %>
-  <br/><br/>
-  <%= submit_tag 'Reject Voter Registration Form' %>
+  <p>
+    <%= submit_tag 'Reject Voter Registration Form', :class => "red_button", :style => "width: 296px" %>
+  </p>
 <% end %>
-
+</div>
+</div>
 
 <script type="text/javascript">
   Registration = function(){};

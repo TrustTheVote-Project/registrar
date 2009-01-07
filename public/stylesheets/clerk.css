@@ -104,7 +104,7 @@ div.login label {
   padding-top: 4px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], select {
   margin-left: 0;
   margin-right: 45px;
   border: 1px solid black;
@@ -204,6 +204,23 @@ div.subtitle {
 
 .text_and_button input[type=submit] {
   width: 165px;
+}
+
+.step_4_two_column span {
+  float: left;
+  margin-left: 2em;
+}
+
+.step_4_two_column select {
+  width: 11.25em;
+}
+
+.step_4_two_column textarea {
+  width: 21.25em;
+}
+
+.step_4_two_column p.textarea_label {
+  margin-bottom: 0;
 }
 
 .red_button {
