@@ -40,7 +40,7 @@ input[type=submit], input[type=button] {
 #hd {
   color: #666666;
   position: relative;
-  height: 90px;
+  height: 83px;
 }
 
 #hd h1 {
@@ -124,7 +124,7 @@ div.login p.button {
 
 #bd > .yui-b {
   overflow: hidden;
-  background: #e3e4db url(/images/clerk-bg.png) 0 -90px no-repeat scroll;
+  background: #e3e4db url(/images/clerk-bg.png) 0 -83px no-repeat scroll;
   padding-top: 1em;
   min-height: 45em;
 }
@@ -165,12 +165,40 @@ input.clerk_button {
 
 
 div.subtitle {
+  position: relative;
+  height: 62px;
   margin-bottom: 1em;
-  padding: 0.5em 1em;
-  background-color: #e3e4db;
+  padding: 0;
+  background: #e3e4db url(/images/blank-button.png) 653px 9px no-repeat;
+}
+
+.subtitle h2 {
   color: #333333;
-  font-size: 182%;
+  font-size: 153.9%;
   font-weight: normal;
+  margin: 0;
+  padding: 0.85em 0 0 1em;
+}
+
+#bd h3 {
+  color: #9b351f;
+  font-size: 138.5%;
+  font-weight: normal;
+  margin-left: 1.5em;
+}
+
+.subtitle a, .subtitle .step {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 62px;
+  height: 48px;
+}
+
+.subtitle .step p {
+  color: #666666;
+  font-size: 116%;
+  margin: 14px 0 0 8px;
 }
 
 #receive_registrations_button {

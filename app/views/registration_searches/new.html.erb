@@ -1,6 +1,10 @@
 <% content_for :subtitle do %>
-  Locate registration by ID
+  <h2>Processing Voter Registration Request</h2>
+  <div class="step"><p>Step 1</p></div>
 <% end %>
+
+<h3>Locate registration by ID</h3>
+
 <div id="inner">
   <% form_tag(registration_searches_path) do %>
     <p><%= label_tag :registration_id, "Registration Tracking ID:" %></p>

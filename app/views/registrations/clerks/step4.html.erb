@@ -1,5 +1,10 @@
-<h1>STEP 4: Please approve or reject this registration.</h1>
-<hr />
+<% content_for :subtitle do %>
+  <h2>Processing Voter Registration Request</h2>
+  <div class="step"><p>Step 4</p></div>
+<% end %>
+
+<h3>Please approve or reject this registration</h3>
+
 <div class="step_4">
 <%= render :partial => '/registrations/display' %>
 <img src="/images/form.jpeg"/>
