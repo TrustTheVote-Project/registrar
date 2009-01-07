@@ -76,8 +76,14 @@ img.search {
   height: 300px;
 }
 
+#bd {
+  position: relative;
+}
+
 div.login {
-  margin: 57px 0 0 183px;
+  position: absolute;
+  top: 50px;
+  left: 180px;
   border: 1px solid black;
   width: 530px;
   height: 255px;
@@ -117,9 +123,8 @@ div.login p.button, #form_container p.button {
 }
 
 #bd.login_bd {
-  background-color: #e3e4db;
-  border-bottom: 70px solid #e3e4db;
-  width: 907px;
+  background: #e3e4db url(/images/clerk-bg.png) 0 -83px no-repeat scroll;
+  height: 400px;
 }
 
 #bd > .yui-b {
@@ -169,7 +174,7 @@ div.subtitle {
   height: 62px;
   margin-bottom: 1em;
   padding: 0;
-  background: #e3e4db url(/images/blank-button.png) 653px 9px no-repeat;
+  background: #e3e4db url(/images/clerk-bg.png) -180px -83px no-repeat;
 }
 
 .subtitle h2 {
@@ -188,22 +193,29 @@ div.subtitle {
   margin-bottom: 2em;
 }
 
-.subtitle a, .subtitle .step {
+.subtitle .step {
   position: absolute;
   top: 9px;
   right: 9px;
   width: 62px;
-  height: 48px;
+  height: 44px;
+  background: #e3e4db url(/images/blank-button.png) top left no-repeat;
 }
+
+.subtitle a {
+  display: block;
+  width: 62px;
+  height: 30px;
+  text-align: center;
+  padding-top: 14px;
+  color: #aaaaaa;
+}
+
 
 .subtitle .step p {
   color: #666666;
   font-size: 116%;
   margin: 14px 0 0 8px;
-}
-
-#receive_registrations_button {
-  float: right;
 }
 
 #scan {

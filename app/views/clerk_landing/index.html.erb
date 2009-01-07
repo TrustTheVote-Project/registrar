@@ -1,5 +1,7 @@
 <% content_for :subtitle do %>
-  <%= link_to image_tag("blank-button.png"), receive_submitted_registrations_path, :method => :put, :id => :receive_registrations_button %>
+  <div class="step">
+    <%= link_to flash[:received_count] || "&nbsp;", receive_submitted_registrations_path, :method => :put %>
+  </div>
 <% end %>
 <ul>
   <li><%= link_to 'Process voter registration forms', new_registration_search_path %></li>
