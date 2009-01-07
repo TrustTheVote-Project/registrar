@@ -32,7 +32,7 @@
     <div class="yui-u">
         <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
           <%= hidden_field :transition, 'approve' %>
-          <%= submit_tag 'Assert Valid Voter Registration Form Received', :class => "green_button", :style => "width: 300px" %>
+          <%= submit_tag 'Accept Voter Registration Form', :class => "green_button", :style => "width: 300px" %>
         <% end %>
     </div>
   </div>
