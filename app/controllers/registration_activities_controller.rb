@@ -11,7 +11,7 @@ class RegistrationActivitiesController < ApplicationController
     if @registration
       render :template => '/registration_activities/citizen', :layout => 'citizen'
     else
-      render :template => '/registration_activities/supervisor', :layout => 'clerk'
+      render :template => '/registration_activities/supervisor', :layout => 'supervisor'
     end
   end
 
