@@ -7,8 +7,17 @@
   <% else %>
     <h4>&nbsp;</h4>
   <% end %>
-  <p>Voter Registration for</p>
+  <p>You have <span class="bold">rejected</span></p>
+  <p>the voter registration application for</p>
   <p><%= current_user ? @registration.name : @registration.abbreviated_name %></p>
-  <p>with Tracking #<%=@registration.id%></p>
-  <p>has been rejected.</p>
+  <table>
+    <tr>
+      <th>Reason:</th>
+      <td><%= @reason %></td>
+    </tr>
+    <tr>
+      <th>Comment:</th>
+      <td><%= @comment %></td>
+    </tr>
+  </table>
 </div>

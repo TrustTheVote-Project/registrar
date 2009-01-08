@@ -244,7 +244,7 @@ div.subtitle {
 }
 
 .zebra .even {
-  background-color: #edeee8;
+  background-color: #dee1d3;
 }
 
 .text_and_button {
@@ -299,6 +299,17 @@ div.subtitle {
   margin: 0.5em;
 }
 
+#registration table {
+  width: 50%;
+  margin-top: 2em;
+  margin-left: 25%;
+}
+
+#registration th, #registration td {
+  border: none;
+  text-align: left;
+  vertical-align: top;
+}
 
 .red_button {
   background-color: #990000 !important;
@@ -318,4 +329,8 @@ div.right input {
 
 div.clear {
   clear: both;
+}
+
+.bold {
+  font-weight: bold;
 }

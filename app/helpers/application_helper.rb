@@ -5,16 +5,7 @@ module ApplicationHelper
   end
 
   def activity_description(activity)
-    state = case activity.message
-      when /must be received/
-        "Submitted"
-      when /Registration form received/
-        "Received"
-      when /Registration form rejected/
-        "Rejected"
-      when /Registration form validated/
-        "Validated"
-    end
+    state = activity.kind.to_s.titleize
     content_tag(:h5, state) + "\n" + content_tag(:p, truncate(activity.message, 80))
   end
 end
