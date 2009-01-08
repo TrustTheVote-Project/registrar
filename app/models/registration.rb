@@ -7,16 +7,10 @@ class Registration < ActiveRecord::Base
   attr_accessor :activity_comment
 
   state :draft
-  state :submitted, :enter => Proc.new {|r| r.add_activity('Registration form validated.
-    Next Step: Your signed original voter registration form must be received at the Adams County Board of Elections.', false)}
-  state :received, :enter => Proc.new {|r| r.add_activity('Registration form received.
-    Next Step: A registration clerk should begin the processing of your form shortly.')}
-  state :rejected, :enter => Proc.new {|r| r.add_activity('Registration form rejected due to inadequate or missing signature.
-    Next Step: Your request cannot be processed because it did not contain a valid signature. Please print and
-    properly sign your registration form and resubmit it.')}
-  state :approved, :enter => Proc.new {|r| r.add_activity('Registration form validated, awaiting DMV approval.
-    Next Step: Your form and signature have been accepted. Your voter registration request is pending
-    completion of a cross-check with the Department of Motor Vehicles.')}
+  state :submitted, :enter => Proc.new {|r| r.add_activity('Submitted', 'Registration form validated', 'Your signed original voter registration form must be received at the Adams County Board of Elections.', false)}
+  state :received, :enter => Proc.new {|r| r.add_activity('Received', 'Registration form received', 'Next Step: A registration clerk should begin the processing of your form shortly.')}
+  state :rejected, :enter => Proc.new {|r| r.add_activity('Rejected', 'Registration form rejected due to inadequate or missing signature', 'Your request cannot be processed because it did not contain a valid signature. Please print and properly sign your registration form and resubmit it.')}
+  state :approved, :enter => Proc.new {|r| r.add_activity('Approved', 'Registration form validated, awaiting DMV approval', 'Your form and signature have been accepted. Your voter registration request is pending completion of a cross-check with the Department of Motor Vehicles.')}
 
   event :submit do
     transitions :to => :submitted, :from => :draft
@@ -43,9 +37,11 @@ class Registration < ActiveRecord::Base
   validates_presence_of :party
   validates_presence_of :id_number
 
-  def add_activity(message, set_clerk = true)
+  def add_activity(status, message, next_step, set_clerk = true)
     activities.create(
+        :status => status,
         :message => message,
+        :next_step => next_step,
         :clerk => set_clerk ? acting_clerk : nil,
         :location => ['Adams County Board of Elections, 532 Tower Road', 'Adams County Records Offices, 89 Courthouse Way', 'Office of the Adams County Recorder, 731 Madison St.'].rand,
         :ip_address => "#{[123, 234, 456].rand}.#{[987, 876, 654].rand}.#{[4, 5, 6].rand}.#{[6, 7, 8].rand}",

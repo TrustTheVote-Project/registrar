@@ -91,3 +91,7 @@ a:hover {
   text-transform: uppercase;
   padding: 0.5em 1em;
 }
+
+.borderless table, th, td {
+  border: 0;  
+}

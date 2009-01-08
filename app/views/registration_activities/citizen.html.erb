@@ -1,25 +1,57 @@
-<h1>Activity for registration <%= @registration.id %></h1>
 
-<table cellpadding="5" border="1">
-  <tr>
-    <th>Date/Time</th>
-    <th>Activity</th>
-    <th>Who</th>
-    <th>Comment</th>
-  </tr>
+<div class="borderless">
 
-  <% for activity in @activities %>
+  <h1>Information About Request for Voter Registration</h1>
+  <table cellpadding="5">
     <tr>
-      <td><%= date_time_display(activity.created_at) %></td>
-      <td><%= h activity.message %></td>
-      <td><%= activity.clerk ? "#{activity.clerk.abbreviated_name} (Clerk)" : "#{activity.registration.abbreviated_name} (Registrant)" %></td>
-      <td><%= activity.comment || '&nbsp;' %></td>
+      <th border="0">Voter Name:</th>
+      <td><%= @registration.abbreviated_name %></td>
+      <th>Origination Date:</th>
+      <td><%= date_display(@registration.created_at) %></td>
     </tr>
-  <% end %>
-</table>
+    <tr>
+      <th>Status:</th>
+      <td><%= @registration.status.to_s.capitalize %></td>
+      <th>Last Activity:</th>
+      <td><%= date_display(@activities.first.created_at) %></td>
+    </tr>
+    <tr>
+      <th>Tracking ID:</th>
+      <td><%= @registration.id %></td>
+    </tr>
+  </table>
 
-<p>You may track the progress of your voter registration request at any time by visting this page. You may
+  <h1>Information About Request for Voter Registration</h1>
+
+  <table cellpadding="5">
+    <tr>
+      <th width="20%">Date</th>
+      <th width="20%">Time</th>
+      <th width="20%">Who</th>
+      <th width="20%">Event Details</th>
+      <th width="20%">Comment</th>
+    </tr>
+
+    <% for activity in @activities %>
+      <tr>
+        <td><%= date_display(activity.created_at) %></td>
+        <td><%= time_display(activity.created_at) %></td>
+        <td><%= activity.clerk ? "#{activity.clerk.abbreviated_name} (Clerk)" : "#{activity.registration.abbreviated_name} (Registrant)" %></td>
+        <td><%= h activity.message %></td>
+        <td><%= activity.comment || '&nbsp;' %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <h1>Information About Request for Voter Registration</h1>
+  <%= h activity.next_step %>
+
+  <hr>
+    <br>
+  <p>You may track the progress of your voter registration request at any time by visting this page. You may
     <%= link_to "bookmark", "#" %> this page to make future visits more convenient.</p>
 
-<p>The status of your voter registration request is public information, but no personally identifying details will be
+  <p>The status of your voter registration request is public information, but no personally identifying details will be
     made public.</p>
+
+</div>
