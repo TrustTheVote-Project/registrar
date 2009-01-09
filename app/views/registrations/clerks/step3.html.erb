@@ -3,7 +3,7 @@
   <div class="step"><p>Step 3</p></div>
 <% end %>
 
-<h3>Please scan and upload the registration received in the mail</h3>
+<h3>Step 3: Please scan and upload the registration received in the mail</h3>
 
 <div id="inner">
   <div id='upload'>
@@ -20,14 +20,14 @@
     <div>
       <p><img src="/images/fake_scan.png"></p>
       <div class="right">
-        <%= button_to_function "Incorrect scan - try again", :class => "red_button", :style => "width: 254px" do |page|
+        Incorrect scan uploaded <%= button_to_function "Try Again", :class => "red_button", :style => "width: 254px" do |page|
           page[:upload].visual_effect :slide_down
           page[:after_upload].visual_effect :slide_up
         end %>
       </div>
       <div class="clear"></div>
       <div class="right">
-        <%= button_to "Correct scan attached - proceed", step4_registration_clerks_path(@registration),
+        Correct scan uploaded <%= button_to "Proceed", step4_registration_clerks_path(@registration),
                         :method => :get, :class => "green_button", :style => "width: 254px" %>
       </div>
       <div class="clear"></div>
