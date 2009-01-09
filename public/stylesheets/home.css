@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  background: #6386AA url(/images/home/gradient.png) top left repeat-x fixed;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;  
+}
+
+#home_content {
+  font-size: 0.8em;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 55px;
+  margin-right: 55px;
+  height: 100%;
+  width: 860px;
+  padding: 20px;
+}
+
+#home_icount {
+  float:left;
+  width: 273px;
+  height: 182px;
+}
+
+#home_banner {
+  float:right;
+  padding-right: 60px;
+  padding-bottom: 15px;
+  width: 452px;
+  height: 84px;
+}
+
+.home_button {
+  float: left;
+  padding-left: 45px;
+  width: 131px;
+  height: 51px;
+}
+
+#home_description {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.home_company {
+  font-size: 0.8em;
+  background-color: white;
+  width: 240px;
+  float: left;
+  margin-right: 40px;
+}
+
+.home_company_title {
+  color: #1E4D75;
+  margin-bottom: 1em;
+}
+
+.home_company_image {
+  background-color: white;
+  width: 240px;
+  float: left;
+  margin-right: 40px;
+  text-align: center;
+}
+
+a {
+  color: #1E4D75;
+  text-decoration:none;
+}

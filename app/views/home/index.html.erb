@@ -1,9 +1,90 @@
-<h1>OSDV DVRS</h1>
-<img src='/images/osdv.jpg'>
-<img src='/images/pivotal.gif' height="67" width="158">
-<img src='/images/engineyard.png'>
+<div id="home_banner">
+  <%= image_tag('/images/home/banner.png') %>
+</div>
+<div id="home_icount">
+  <%= image_tag('/images/home/icount.png') %>
+</div>
 
-<hr/>
-<p><a href="citizen_landing1">Citizen</a></p>
-<p><a href="clerk_landing">Clerk</a></p>
-<p><a href="registration_activities">Supervisor</a></p>
+<div style="clear:right">&nbsp;</div>
+
+<div class="home_button">
+  <%= link_to(image_tag('/images/home/citizen-button.png', :border => 0), citizen_landing1_path) %>
+</div>
+<div class="home_button">
+  <%= link_to(image_tag('/images/home/clerk-button.png', :border => 0), clerk_landing_path) %>
+</div>
+<div class="home_button">
+  <%= link_to(image_tag('/images/home/supervisor-button.png', :border => 0), registration_activities_path) %>
+</div>
+
+<div style="clear:both">&nbsp;</div>
+
+<div id="home_description">
+  <p>
+    <b>TrustTheVote (TTV)</b> is the technology development arm of the non-profit Open Source Digital Voting Foundation.<br>
+    The OSDV Foundation is designing and developing open source, open data, and open standards voting technology, from
+    voter registration to ballot casting, counting and elections management. All work is held in the public trust and
+    freely available.
+  </p>
+
+  <p>
+    This site demonstrates the early version of the forthcoming Digital Voter Registration Service - a system that
+    leverages the Internet to offer citizens a <b>transparent, traceable, easy-to-use voter registration service.</b>
+  </p>
+
+  <p>
+    The digital voter registration service is an example of open source technology being developed and maintained in the
+    public trust. Other work forthcoming includes ballot casting and counting systemns, and election management tools.
+  </p>
+
+  <p>
+    To learn more please visit <%= link_to('www.osdv.org', 'http://www.osdv.org') %> and follow us on Twitter
+    (<%= link_to('www.twitter.com/osdv', 'http://www.twitter.com/osdv') %>).
+  </p>
+
+</div>
+<div style="clear:both">&nbsp;</div>
+
+
+<div class="home_company">
+  <div class="home_company_title">ABOUT THE OSDV FOUNDATION</div>
+  <div class="home_company_description">The OSDV Foundation believes the cornerstone of democracy is the vote, and in a
+    digital age that conerstone
+    relies on
+    technology. Such technology is critical democracy infratstructure and cannot be sustained in the private sector as
+    a
+    black box solution; rather, it must be developed and maintained transparently as a glass box solution, in the
+    public
+    trust. The OSDV Foundation is a 501.c.3 public benefit corporation based in the Silicon Valley.
+  </div>
+
+</div>
+
+<div class="home_company">
+  <div class="home_company_title">PIVOTAL LABS</div>
+  <div class="home_company_description">This demonstration and the underlying core software is made possible through a
+    generous grant from Pivotal
+    Labs, a leading Internet software applications agile development firm.
+  </div>
+</div>
+
+<div class="home_company">
+  <div class="home_company_title">ENGINE YARD</div>
+  <div class="home_company_description">Support has also been generously provided by EngineYard Incorporated, a rapidly
+    growning highly scalable
+    hosting
+    service for business-critical Internet-based applications.
+  </div>
+</div>
+
+<div style="clear:both"></div>
+
+<div class="home_company_image">
+  <%= link_to(image_tag('/images/home/osdv.jpg', :border => 0), 'http://www.osdv.org') %>
+</div>
+<div class="home_company_image">
+  <%= link_to(image_tag('/images/home/pivotal.gif', :border => 0), 'http://www.pivotallabs.com') %>
+</div>
+<div class="home_company_image">
+  <%= link_to(image_tag('/images/home/engineyard.png', :border => 0), 'http://www.engineyard.com') %>
+</div>

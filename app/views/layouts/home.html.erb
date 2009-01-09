@@ -2,10 +2,12 @@
 <head>
   <title>OSDV DVRS</title>
   <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag 'home' %>
 </head>
 <body>
 
-<%= yield %>
-
+<div id="home_content">
+  <%= yield %>
+</div>
 </body>
 </html>
