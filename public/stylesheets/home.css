@@ -4,15 +4,14 @@ html {
 }
 
 body {
-  font-family: helvetica, arial, sans-serif;  
+  font-family: helvetica, arial, sans-serif;
 }
 
 #home_content {
+  margin: auto;
   font-size: 0.8em;
   background-color: white;
   margin-top: 20px;
-  margin-left: 55px;
-  margin-right: 55px;
   height: 100%;
   width: 860px;
   padding: 20px;
