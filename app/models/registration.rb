@@ -8,7 +8,7 @@ class Registration < ActiveRecord::Base
 
   state :draft
   state :submitted, :enter => Proc.new {|r| r.add_activity('Submitted', 'Registration form validated', 'Your signed original voter registration form must be received at the Adams County Board of Elections.', false)}
-  state :received, :enter => Proc.new {|r| r.add_activity('Received', 'Registration form received', 'Next Step: A registration clerk should begin the processing of your form shortly.')}
+  state :received, :enter => Proc.new {|r| r.add_activity('Received', 'Registration form received', 'A registration clerk should begin the processing of your form shortly.')}
   state :rejected, :enter => Proc.new {|r| r.add_activity('Rejected', 'Registration form rejected due to inadequate or missing signature', 'Your request cannot be processed because it did not contain a valid signature. Please print and properly sign your registration form and resubmit it.')}
   state :approved, :enter => Proc.new {|r| r.add_activity('Approved', 'Registration form validated, awaiting DMV approval', 'Your form and signature have been accepted. Your voter registration request is pending completion of a cross-check with the Department of Motor Vehicles.')}
 
