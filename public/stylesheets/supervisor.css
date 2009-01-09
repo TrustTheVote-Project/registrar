@@ -38,6 +38,9 @@ div.subtitle h2 {
 
 .zebra td.event {
   border-left: 1px solid #999999;
+}
+
+.zebra td.by {
   border-right: 1px solid #999999;
 }
 
