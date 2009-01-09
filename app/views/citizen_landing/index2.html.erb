@@ -1,44 +1,97 @@
 <% @box_title = "Register to Vote" %>
 <h1>Register to vote in the state of Jeffersonia</h1>
 <p>
-  Thank you for your interest in voter registration. The power of our democracy 
-  depends on participation from citizens like you.
+  Thank you for your interest in voting - the strength of our democracy depends on participation from citizens like you!
+    In order to vote in the state of Jeffersonia, you must first register to vote. Everything you need to know about
+    registration you can find right here, including: how to register, whether you are eligible, how to download a
+    registration request form, how to fill out the form, and where to mail your form. Also, you can choose to use the
+    online <%= link_to 'Voter Registration Assistant', step1_new_registration_citizens_path %>, which willhelp you
+    fill out the form correctly. The <%= link_to 'Voter Registration Assistant', step1_new_registration_citizens_path %>
+    also provides online tracking of your request in a similar manner to tracking an express package through the mail
+    or a delivery service.
 </p>
+<h3>How to Register to Vote</h3>
 <p>
-  To register to vote in Jeffersonia you must attest:
+  The basic concept of voter registration is simple: 
 </p>
-<ol>
-  <li>You are a citizen of the United States</li>
-  <li>You are a resident of Jeffersonia</li>
-  <li>You are at least 18 years of age</li>
-  <li>You are not currently serving a sentence or on parole for a felony conviction</li>
-</ol>
+<ul>
+  <li>You must be <strong>eligible</strong> to vote (see below),</li>
+  <li>You must fill out a voter registration <strong>application</strong> form,</li>
+  <li>You must <strong>sign</strong> the form,</li>
+  <li>After signing the form, you <strong>mail</strong> it to your county registrar to be processed.</li>
+</ul>
 <p>
-  To expedite filling out your voter registration form, please have at hand the name of the county in which you live
-  and your Jeffersonia driver's license number. If you do not have a Jeffersonia driver's license, you may use the
-  last four digits of your Social Security Number as an identifying number. If you do not have a Social Security
-  Number or do not wish to use it as an identifying number, you may elect to have the county Board of Elections for
-  your county assign you an identification number, but be aware this may cause delays in the processing of your
-  application.
+  After mailing in your form, you should expect to receive mail back from your county registrar within about three
+    weeks. If you choose to use the Voter Registration Assistant, you can do online tracking of the progress of your
+    application as often as you like.
 </p>
+<h3>About the Voter Registration Application Form</h3>
 <p>
-  To register to vote you must submit an <em>original signed form</em> to the county Board of Elections for your
-  county. If you live in Adams county, you may also participate in our validation and
-  accountability program for voter registrations. Your form will be electronically validated and the progress of
-  your registration request will be availbale to you via our website. It is not required that you participate, and
-  your participation in the program will not affect the approval or rejection of your application.
+  The application form is the way that you provide three critical types of information:
+</p>
+<ul>
+  <li>You attest that you are eligible,</li>
+  <li>You provide your name, address, and other information about you that is required to enable you to vote,</li>
+  <li>You provide a signature that attests to the truth of the information on the form, and is used later to identify
+      you in cases like change of address, absentee voting, etc.</li>
+</ul>
+<p>
+    In order for your registration to be correctly processed, it’s important that you fill out the form legibly,
+    completely, correctly, and accurately. Errors will delay processing and likely require you to re-apply. That’s why
+    we’ve provided the online <%= link_to 'Voter Registration Assistant', step1_new_registration_citizens_path %>, to
+    ensure that your form is correct, and to avoid any delays in processing your application. If you choose to fill out
+    the <%= link_to 'application form', '#'%> manually, please carefully read the <%= link_to 'detailed instructions',
+    '#'%>. (Click <%= link_to 'here', '#'%> to download the form, and click <%= link_to 'here', '#'%> to read the instructions.)
 </p>
 
-<h3>Next Step:</h3>
-<ol>
-  <li><%= link_to 'Download the voter registration form', '#'%>
-  <li>Print it out
-  <li>Complete and sign the form
-  <li>Mail the original signed completed form to your county Board of Elections office
-</ol>
-
-<h4>Adams County Residents:</h4>
+<h3>Eligibility</h3>
 <p>
-  If you reside in Adams county, you may use our <%= link_to 'online validation and tracking',
-  step1_new_registration_citizens_path %> voter registration assistant.
+    To register to vote in Jeffersonia you must:
+</p>
+<ol>
+    <li>Be citizen of the United States,</li>
+    <li>Be a resident of Jeffersonia,</li>
+    <li>Be at least 18 years of age on the date of the next election,</li>
+    <li>Not be currently serving a sentence, or on parole for, a felony conviction.</li>
+</ol>
+<p>
+    To expedite filling out your voter registration form, you should be able to identify yourself by name and by
+    driver’s license number; or if you don’t have a driver’s license, then by the last four digits of your Social
+    Security number. If you don’t have driver’s license and you also don’t have a Social Security Number, you can
+    still register to vote, but using an alternate identification process. Click <%= link_to 'here', '#'%> to look up
+    your county and find out about its alternate process. 
+</p>
+<h3>Next Step</h3>
+
+<p>To register to vote, your next step is to choose how to fill out the application form, either manually, or using the
+    <%= link_to 'Voter Registration Assistant', step1_new_registration_citizens_path %>. You can either:
+</p>
+<ul>
+    <li>Click <%= link_to 'here', step1_new_registration_citizens_path %> to start using the <%= link_to 'Voter
+    Registration Assistant', step1_new_registration_citizens_path %> to correctly fill out the form and print it</li>
+</ul>
+<p>
+    or you can
+</p>
+<ul>
+    <li>Click <%= link_to 'here', '#'%> to download and print the form</li>
+    <li>Click <%= link_to 'here', '#'%> to read the instructions</li>
+    <li>Follow the instructions to fill out the form manually</li>
+</ul>
+
+<h3>Last Step</h3>
+
+<p>
+    Once you have a complete, filled-out application form in hand, your last two <strong>required</strong> steps are:
+</p>
+
+<ul>
+    <li><strong>Sign</strong> the form – your signature is <strong>required</strong></li>
+    <li><strong>Mail</strong> the signed form to your county registrar’s office</li> (click <%= link_to 'here', '#'%> for a list of
+    addresses of county registrars in Jeffersonia)
+</ul>
+<p>
+    These last two steps are <strong>required</strong> whether you fill out the application manually or use the
+    online <%= link_to 'Voter Registration Assistant', step1_new_registration_citizens_path %> to fill out the form
+    and obtain tracking information for you to check the status of your application’s processing.
 </p>

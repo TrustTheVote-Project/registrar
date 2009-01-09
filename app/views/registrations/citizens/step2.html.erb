@@ -6,6 +6,6 @@
 
 <%= render :partial => 'registrations/display' %>
 
-<h2>This information is incorrect and I need to <%= link_to 'make changes',  step1_edit_registration_citizens_path(@registration) %>.</h2>
-
+<h2>This information is incorrect and I need to </h2><%= button_to 'Return to Step 1: Enter Information',  step1_edit_registration_citizens_path(@registration) %>
+<br>
 <h2>This information is correct and I am ready to </h2><%= button_to "Continue to Step 3: Print & Sign", step3_registration_citizens_path(@registration), :method => :get %>
