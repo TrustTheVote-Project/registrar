@@ -1,7 +1,7 @@
 
 <div class="borderless">
 
-  <h1>Information About Request for Voter Registration</h1>
+  <div class="box_title">Information About Request for Voter Registration</div>
   <table cellpadding="5">
     <tr>
       <th border="0">Voter Name:</th>
@@ -21,15 +21,15 @@
     </tr>
   </table>
 
-  <h1>Information About Request for Voter Registration</h1>
+  <div class="box_title">Information About Request for Voter Registration</div>
 
   <table cellpadding="5">
     <tr>
-      <th width="20%">Date</th>
-      <th width="20%">Time</th>
-      <th width="20%">Who</th>
-      <th width="20%">Event Details</th>
-      <th width="20%">Comment</th>
+      <td width="20%"><b>Date</b></td>
+      <td width="20%"><b>Time</b></td>
+      <td width="20%"><b>Who</b></td>
+      <td width="20%"><b>Event Details</b></td>
+      <td width="20%"><b>Comment</b></td>
     </tr>
 
     <% for activity in @activities %>
@@ -43,15 +43,17 @@
     <% end %>
   </table>
 
-  <h1>Information About Request for Voter Registration</h1>
-  <%= h activity.next_step %>
-
+  <div class="box_title">Information About Request for Voter Registration</div>
+  <br>
+  <b><%= h @activities.first.next_step %></b>
+  <br>
+  <br>
   <hr>
-    <br>
-  <p>You may track the progress of your voter registration request at any time by visting this page. You may
-    <%= link_to "bookmark", "#" %> this page to make future visits more convenient.</p>
+  <br>
+  <p><i>You may track the progress of your voter registration request at any time by visting this page. You may
+    <%= link_to "bookmark", "#" %> this page to make future visits more convenient.</i></p>
 
-  <p>The status of your voter registration request is public information, but no personally identifying details will be
-    made public.</p>
+  <p><i>The status of your voter registration request is public information, but no personally identifying details will be
+    made public.</i></p>
 
 </div>
