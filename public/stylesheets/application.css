@@ -8,7 +8,11 @@
 }
 
 html {
-  background: #1E4D75 url( /images/background.png ) no-repeat; /* Background Blue */
+  background: #526980 url( /images/gradient.png ) repeat-x;
+}
+
+body {
+  background: url( /images/background.png ) no-repeat; /* Background Blue */
 }
 
 a {
