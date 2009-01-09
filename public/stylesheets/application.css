@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  background: url( /images/background.png ) no-repeat; /* Background Blue */
 }
 
 a {
@@ -25,7 +24,8 @@ a:hover {
 }
 
 #doc2 {
-  margin-left: 50px;
+  margin: auto;
+  background: url( /images/background.png ) no-repeat; /* Background Blue */
 }
 
 #hd {
