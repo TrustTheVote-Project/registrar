@@ -19,18 +19,21 @@
   <div id="after_upload" style="display:none; height: 500px">
     <div>
       <p><img src="/images/fake_scan.png"></p>
-      <div class="right">
-        Incorrect scan uploaded <%= button_to_function "Try Again", :class => "red_button", :style => "width: 254px" do |page|
+      <div class="right"><%= button_to_function "Try Again", :class => "red_button", :style => "width: 254px" do |page|
           page[:upload].visual_effect :slide_down
           page[:after_upload].visual_effect :slide_up
         end %>
       </div>
-      <div class="clear"></div>
+      <div class="right" style="width: 170px;padding-top:25px">Incorrect scan uploaded</div>
+
+      <div class="clear">&nbsp;</div>
       <div class="right">
-        Correct scan uploaded <%= button_to "Proceed", step4_registration_clerks_path(@registration),
+        <%= button_to "Proceed", step4_registration_clerks_path(@registration),
                         :method => :get, :class => "green_button", :style => "width: 254px" %>
       </div>
-      <div class="clear"></div>
+      <div class="right" style="width: 170px;padding-top:25px">Correct scan uploaded</div>
+
+      <div class="clear">&nbsp;</div>
     </div>
   </div>
 </div>
