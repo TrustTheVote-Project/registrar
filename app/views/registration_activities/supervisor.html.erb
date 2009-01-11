@@ -22,7 +22,7 @@
       <td class="citizen"><%= activity.registration.name %></td>
       <td><%= activity.registration.id_number%></td>
       <td><%= activity.registration_id %></td>
-      <td><%= image_tag('form.jpeg')%></td>
+      <td><%= image_tag('form.png')%></td>
       <td class="event"><h5><%= activity.status.to_s.capitalize %></h5></td>
       <td class="by"><%= activity.clerk ? "#{activity.clerk.name} (Clerk)" : "#{activity.registration.name} (Registrant)" %></td>
       <td><%= date_time_display(activity.created_at) %></td>
