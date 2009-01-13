@@ -8,7 +8,8 @@ Your username and password is the same for all slices.
 
  username      :  pass
  -----------------------------
- osdv      :  Sii7j59cnPy4
+ osdv      :  Sii7j59cnPy4  (prod)
+ osdv      :  Si7j59cnPy4 (staging)
 
 Put this in ~/.ssh/config on your local computer to make connecting easy:
 ------------cut--------------

@@ -1,7 +1,23 @@
-<h1>
+<div id="registration">
   <% if current_user %>
-    Thank you <%= current_user.name %>, you have rejected the Voter Registration for <%= @registration.name %> with Tracking ID <%=@registration.id%>.
+    <% content_for :subtitle do %>
+      <h2>Processing Voter Registration Request</h2>
+    <% end %>
+    <h4>Thank you, <%= current_user.name %>!</h4>
   <% else %>
-    The Voter Registration for <%= @registration.abbreviated_name %> with Tracking ID <%=@registration.id%> has been rejected.
+    <h4>&nbsp;</h4>
   <% end %>
-</h1>
+  <p>You have <span class="bold">rejected</span></p>
+  <p>the voter registration application for</p>
+  <p><%= current_user ? @registration.name : @registration.abbreviated_name %></p>
+  <table>
+    <tr>
+      <th>Reason:</th>
+      <td><%= @reason %></td>
+    </tr>
+    <tr>
+      <th>Comment:</th>
+      <td><%= @comment %></td>
+    </tr>
+  </table>
+</div>

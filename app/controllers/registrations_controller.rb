@@ -6,7 +6,11 @@ class RegistrationsController < ApplicationController
 
   def show
     @registration = Registration.find(params[:id])
-    render :template => "/registrations/#{@registration.current_state.to_s}",
+    if @registration.current_state == :rejected
+      rejection = @registration.activities.detect { |a| a.kind == :rejected }
+      @reason, @comment = rejection.reason_and_comment
+    end
+    render :template => "/registrations/#{@registration.current_state}",
            :layout => (@registration.under_edit? || @registration.submitted?) ? 'citizen' : 'clerk'
   end
 

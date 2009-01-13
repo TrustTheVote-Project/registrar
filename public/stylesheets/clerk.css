@@ -15,6 +15,7 @@ html {
 
 body {
   height: 100%;
+  font-family: helvetica, arial, sans-serif;
 }
 
 input[type=submit], input[type=button] {
@@ -40,7 +41,7 @@ input[type=submit], input[type=button] {
 #hd {
   color: #666666;
   position: relative;
-  height: 90px;
+  height: 83px;
 }
 
 #hd h1 {
@@ -76,8 +77,14 @@ img.search {
   height: 300px;
 }
 
+#bd {
+  position: relative;
+}
+
 div.login {
-  margin: 57px 0 0 183px;
+  position: absolute;
+  top: 50px;
+  left: 180px;
   border: 1px solid black;
   width: 530px;
   height: 255px;
@@ -93,18 +100,18 @@ div.login h2 {
   font-weight: bold;
 }
 
-div.login p {
+div.login p, #form_container p {
   overflow: hidden;
   padding-left: 75px;
 }
 
-div.login label {
+div.login label, #form_container label {
   float: left;
   width: 75px;
   padding-top: 4px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], select {
   margin-left: 0;
   margin-right: 45px;
   border: 1px solid black;
@@ -112,19 +119,18 @@ input[type=text], input[type=password] {
   width: 228px;
 }
 
-div.login p.button {
+div.login p.button, #form_container p.button {
   padding: 30px 0 0 360px;
 }
 
 #bd.login_bd {
-  background-color: #e3e4db;
-  border-bottom: 70px solid #e3e4db;
-  width: 907px;
+  background: #e3e4db url(/images/clerk-bg.png) 0 -83px no-repeat scroll;
+  height: 400px;
 }
 
 #bd > .yui-b {
   overflow: hidden;
-  background: #e3e4db url(/images/clerk-bg.png) 0 -90px no-repeat scroll;
+  background: #e3e4db url(/images/clerk-bg.png) 0 -83px no-repeat scroll;
   padding-top: 1em;
   min-height: 45em;
 }
@@ -165,16 +171,67 @@ input.clerk_button {
 
 
 div.subtitle {
+  position: relative;
+  height: 62px;
   margin-bottom: 1em;
-  padding: 0.5em 1em;
-  background-color: #e3e4db;
-  color: #333333;
-  font-size: 182%;
-  font-weight: normal;
+  padding: 0;
+  background: #e3e4db url(/images/clerk-bg.png) -180px -83px no-repeat;
 }
 
-#receive_registrations_button {
+.subtitle h2 {
+  color: #333333;
+  font-size: 153.9%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.85em 0 0 1em;
+}
+
+#bd h3 {
+  color: #9b351f;
+  font-size: 138.5%;
+  font-weight: normal;
+  margin-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.subtitle .step {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 62px;
+  height: 44px;
+  background: #e3e4db url(/images/blank-button.png) top left no-repeat;
+}
+
+.subtitle a {
+  display: block;
+  width: 62px;
+  height: 30px;
+  text-align: center;
+  padding-top: 14px;
+  color: #aaaaaa;
+}
+
+
+.subtitle .step p {
+  color: #666666;
+  font-size: 116%;
+  margin: 14px 0 0 8px;
+}
+
+#scan {
   float: right;
+  position: relative;
+  width: 342px;
+  height: 202px;
+  padding: 0 0 14px 14px;
+  background-color: white;
+}
+
+#scan img {
+  width: 340px;
+  height: 200px;
+  border: 1px solid black;
 }
 
 .zebra {
@@ -183,11 +240,11 @@ div.subtitle {
 
 .zebra td {
   border: none;
-  padding-left: 2em;
+  padding: 5px 0 4px 2em;
 }
 
 .zebra .even {
-  background-color: #edeee8;
+  background-color: #e4d2c3;
 }
 
 .text_and_button {
@@ -204,6 +261,54 @@ div.subtitle {
 
 .text_and_button input[type=submit] {
   width: 165px;
+}
+
+.zebra td.label {
+  width: 90px;
+}
+
+.step_4 .yui-g {
+  padding: 2em 0 0 2em;
+}
+
+.step_4 select {
+  width: 11.25em;
+}
+
+.step_4 textarea {
+  width: 21.25em;
+}
+
+.step_4 p.textarea_label {
+  margin-bottom: 0;
+}
+
+#registration {
+  text-align: center;
+}
+
+#registration h4 {
+  color: #333333;
+  font-size: 138.5%;
+  margin: 2em;
+}
+
+#registration p {
+  color: #9b351f;
+  font-size: 153.9%;
+  margin: 0.5em;
+}
+
+#registration table {
+  width: 50%;
+  margin-top: 2em;
+  margin-left: 25%;
+}
+
+#registration th, #registration td {
+  border: none;
+  text-align: left;
+  vertical-align: top;
 }
 
 .red_button {
@@ -224,4 +329,8 @@ div.right input {
 
 div.clear {
   clear: both;
+}
+
+.bold {
+  font-weight: bold;
 }

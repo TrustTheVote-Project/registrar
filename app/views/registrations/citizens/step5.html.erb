@@ -1,11 +1,16 @@
 <%= render :partial => 'registrations/citizens/wizard' %>
 <h1>STEP 5: Your registration has been submitted</h1>
 
-<p>Thank you for using the Adams County Voter Registration Online Validation and Tracking tool. Your signed
-    registration form must be received at the Adams County Board of Elections offices before your registration
-    application can proceed.</p>
+<p>Now that your signed voter registration application form is in
+the mail, the processing of your request will begin after the form
+arrives at the Adams County Board of Election offices. </p>
 
-<p>
-  Your registration's tracking number is <%=@registration.id%>.
-  You can track the progress of your registration here: <%= link_to(tracking_url(@registration.id), tracking_url(@registration.id)) %>
+<p> To check status or track progress, you can use this customized tracking Web page:
 </p>
+<p>
+<%= link_to(tracking_url(@registration.id), tracking_url(@registration.id)) %>
+</p>    
+
+<p>This page automatically includes your application's registration number
+of <%=@registration.id%></p>
+

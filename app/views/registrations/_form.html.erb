@@ -47,13 +47,13 @@
     </td>
     <td>
       <%= f.label :zip %><br />
-      <%= f.select :zip, ['456780', '456781', '456782'] %>
+      <%= f.select :zip, ['97009', '97025', '97029'] %>
     </td>
   </tr>
   <tr>
     <td>
       <%= f.label :date_of_birth %><br />
-      <%= f.date_select :date_of_birth, :start_year => 1900, :end_year => 1991, :include_blank => true %>
+      <%= f.date_select :date_of_birth, :start_year => 1991, :end_year => 1900, :include_blank => true %>
     </td>
     <td>
       <%= f.label :party %><br />
@@ -68,6 +68,5 @@
   </tr>
 
 </table>
-<p>* You may use your State of Jeffersonia Driver's License number as your identification number. If you do not have a
-    Jeffersonia Driver's License or do not wish to use it as your identificion number, you may use the last four digits
-    of your Social Security number.
+<p>* Please use your State of Jeffersonia driver's license number as your voter registration ID number. If you do not
+    have a Jeffersonia Driver's License, please use the last four digits of your Social Security number.

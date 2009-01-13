@@ -1,26 +1,36 @@
 <%= render :partial => 'registrations/citizens/wizard' %>
 <h1>STEP 4: Mail Your Registration To Us!</h1>
 
-<p>Adams County residents should mail their application to:</p>
-<pre>
-    Adams County Board of Elections
-    Attn: Voter Registration
-    532 Tower Road
-    Dinsmore, JA 456781
-</pre>
-
-<p>Did you remember to sign your form? Voter registrations submitted without a signature cannot be approved!</p>
-
-<p>Click the button marked "Continue to Step 5: Submit" to start tracking the progress of your voter registration
-    submission.</p>
-
 <p>
 
   <%= image_tag 'mail31.gif' %>
 </p>
+
+<p>Your next step is to mail your voter registration application form. Please mail the form to the following address:</p>
+
+
+
+<pre>
+    Adams County Board of Elections
+    Attn: Voter Registration
+    532 Tower Road
+    Dinsmore, JA 97009
+</pre>
+
+
+
+
+<p><strong>Please note:</strong> a signature is required on our form. Voter registrations submitted without
+a signature cannot be approved!</p>
+
+<p>For your final step in the application
+process, please click the button marked "Continue to Step 5: Submit" to start tracking the progress of your voter registration
+    submission.</p>
+
 
 <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
     <%= hidden_field :transition, 'submit' %>
     <%= submit_tag 'Continue to Step 5: Submit' %>
     <%= hidden_field_tag :next_url, step5_registration_citizens_path(@registration) %>
 <% end %>
+

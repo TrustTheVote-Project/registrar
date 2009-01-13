@@ -1,11 +1,31 @@
 <%= render :partial => 'registrations/citizens/wizard' %>
 <h1>STEP 3: Print & Sign Your Registration</h1>
 
-<p>Please print your registration and legibly sign the printed form where indicated.</p>
-<p>When you have printed and signed the form, please click the button marked "Continue to Step 4: Mail"</p>
-
 <p>
   <%= image_tag 'animated_printer.gif' %>
 </p>
+
+<p>Please print your registration application form by clicking the "Print Application" button below</p>
+
+<p>
+    <button>Print Application</button>
+</p>
+
+<p>Next, please <strong>sign</strong> the form in the signature area indicated on the lower right of the form.</p>
+
+<p><strong>Please note:</strong> you must sign the form, and by doing you are attesting that you meet the eligibility
+    requirements of being:
+</p>
+<ul>
+    <li>a citizen of USA,</li>
+    <li>a resident of Jeffersonia,</li>
+    <li>not incarcerated or on parole for a felony,</li>
+    <li>and 18 years of age by the <%= link_to 'date of the next election', '#' %>.</li>
+</ul>
+
+<p>Once you have  signed the form,
+    please click the button marked "Continue to Step 4: Mail"</p>
+
+
 
 <%= button_to "Continue to Step 4: Mail", step4_registration_citizens_path(@registration), :method => :get %>

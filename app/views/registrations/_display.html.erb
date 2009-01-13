@@ -1,19 +1,20 @@
 <% names_and_attributes = [
-    ['ID #', :id],
-    ['Salutation', :salutation],
-    ['Name', :name],
-    ['Address', :full_address],
-    ['County', :county],
-    ['Date of birth', :date_of_birth],
-    ['Phone', :phone],
-    ['Party', :party],
-    ['Tracking #', :id_number]
+    ['Salutation:', :salutation],
+    ['Name:', :name],
+    ['Address:', :address],
+    ['&nbsp;', :city_state_zip],
+    ['County:', :county],
+    ['Date of birth:', :date_of_birth],
+    ['Phone:', :phone],
+    ['Party:', :party],
+    ['Citizen ID #:', :id_number],
+    ['Tracking #:', :id]
   ] %>
 <table class="zebra">
   <% names_and_attributes.each do |tuple| %>
     <tr class="<%= cycle('even', 'odd') %>">
-      <td><%= tuple.first %>:</td>
-      <td><%= @registration.send(tuple.last) %></td>
+      <td class="label"><%= tuple.first %></td>
+      <td class="value"><%= @registration.send(tuple.last) %></td>
     </tr>
   <% end %>
 </table>

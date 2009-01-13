@@ -1,44 +1,117 @@
 <% @box_title = "Register to Vote" %>
-<h1>Register to vote in the state of Jeffersonia</h1>
+<h1>What You Need to Know to Register to Vote</h1>
 <p>
-  Thank you for your interest in voter registration. The power of our democracy 
-  depends on participation from citizens like you.
-</p>
-<p>
-  To register to vote in Jeffersonia you must attest:
+  The strength of our democracy depends on citizens like you, casting your votes when elections are held.  Voting in
+    the state of Jeffersonia requires registration.  There are 5 simple things you need to know:
 </p>
 <ol>
-  <li>You are a citizen of the United States</li>
-  <li>You are a resident of Jeffersonia</li>
-  <li>You are at least 18 years of age</li>
-  <li>You are not currently serving a sentence or on parole for a felony conviction</li>
+    <li><%= link_to 'Am I eligible?', '#eligible' %></li>
+    <li><%= link_to 'How do I register?', '#register' %></li>
+    <li><%= link_to 'Why do I need a registration form?', '#needform' %></li>
+    <li><%= link_to 'How can I obtain a registration form?', '#getform' %></li>
+    <li><%= link_to 'Where do I mail the completed form?', '#mailform' %></li>
 </ol>
+<h3>Want to make registering even easier and faster?</h3>
 <p>
-  To expedite filling out your voter registration form, please have at hand the name of the county in which you live
-  and your Jeffersonia driver's license number. If you do not have a Jeffersonia driver's license, you may use the
-  last four digits of your Social Security Number as an identifying number. If you do not have a Social Security
-  Number or do not wish to use it as an identifying number, you may elect to have the county Board of Elections for
-  your county assign you an identification number, but be aware this may cause delays in the processing of your
-  application.
+  You can use “<strong><%= link_to 'Reggie', step1_new_registration_citizens_path %></strong>”, our
+    <%= link_to 'Digital Registration Clerk', step1_new_registration_citizens_path %>, to help you make sure
+    you fill out the form correctly.  And <strong><%= link_to 'Reggie', step1_new_registration_citizens_path %></strong>
+    can also help you track the progress of your registration online, just like you might track a package in the mail
+    or a delivery service.  Now, how helpful is that?
 </p>
-<p>
-  To register to vote you must submit an <em>original signed form</em> to the county Board of Elections for your
-  county. If you live in Adams county, you may also participate in our validation and
-  accountability program for voter registrations. Your form will be electronically validated and the progress of
-  your registration request will be availbale to you via our website. It is not required that you participate, and
-  your participation in the program will not affect the approval or rejection of your application.
-</p>
+<h3><a name="eligible"></a>1. Am I Eligible to Register and Vote?</h3>
+<p>You can register to vote in Jeffersonia provided you can answer “yes” to each of the following four questions:</p>
 
-<h3>Next Step:</h3>
 <ol>
-  <li><%= link_to 'Download the voter registration form', '#'%>
-  <li>Print it out
-  <li>Complete and sign the form
-  <li>Mail the original signed completed form to your county Board of Elections office
+  <li>I am a citizen of the United States as of today,</li>
+  <li>I have a permanent address and I reside in the state of Jeffersonia,</li>
+  <li>I am or will be at least 18 years of age on the date of the next election,</li>
+  <ul>
+     <li><%= link_to 'When is the Next Election?', '#' %></li>
+  </ul>    
+  <li>I have not been convicted of a criminal felony, and not on parole.</li>
 </ol>
 
-<h4>Adams County Residents:</h4>
+<p>You can speed up the process of your voter registration by providing us with either your Jeffersonia driver’s
+    license number or the four digits of your social security number.</p>
+
+<ul><li><%= link_to 'Why is this safe?', '#' %></li></ul>
+
+<p>If you do not have either a valid driver’s license or a social security number, you can still register to vote.
+    We can use different ways of identification. You can learn your county’s alternate process <%= link_to 'here', '#' %>.
+    If you are not sure of your county, we can help you learn that from your address and postage zip code.</p>
+
+<h3><a name="register"></a>2. How do I Register to Vote?</h3>
+<p>The process is as simple as 4 steps, and you already may have done the first by reading <%= link_to 'Step 1', '#' %>
+    above.</p>
+
+<ul>
+  <li>You must be <font color="red">eligible</font> to vote (see <%= link_to '1', '#eligible' %> above),</li>
+  <li>You must <font color="red">complete</font> a registration form (see <%= link_to '3', '#needform' %> below),</li>
+  <li>You must <font color="red">sign</font> the form,</li>
+  <li>You must <font color="red">mail</font> the completed signed form to your county registrar to complete the process.</li>
+</ul>
+
 <p>
-  If you reside in Adams county, you may use our <%= link_to 'online validation and tracking',
-  step1_new_registration_citizens_path %> voter registration assistant.
-</p>
+After you mail your form, you will receive your registration card or a response back from your county registrar in
+    approximately 3 weeks.  If you want to track your registration process, let <strong><%= link_to 'Reggie',
+        step1_new_registration_citizens_path %></strong>, the <%= link_to 'online voter registration assistant',
+        step1_new_registration_citizens_path %> help you as often as you like.</p>
+
+<h3><a name="needform"></a>3. Why do I need a registration form?</h3>
+
+<p>The voter registration form is the <font color="red">only</font> way to register and it provides 2 critical pieces of
+    information:</p>
+<ol>
+  <li>Your full legal name, with vital contact and eligibility information required to register you to vote,</li>
+  <li>An attestation (your signature) acknowledging a legally binding statement that you are eligible to vote, and the
+      information you have provided is truthful and correct.</li>
+</ol>
+
+<p>This information is also used later to identify you in case you need to change your address, party affiliation, or
+    request absentee voting.  </p>
+
+<p>In order for your registration to be correctly processed, it is important that you fill out the form legibly,
+    completely, correctly, and accurately.  Errors delay processing and will likely require you to start over.  That’s
+    why we offer <strong><%= link_to 'Reggie', step1_new_registration_citizens_path %></strong>, the
+    <%= link_to 'online voter registration assistant', step1_new_registration_citizens_path %>: to help you make sure
+    your form is correctly completed, and to avoid any delays in processing.  If you choose to fill out the
+    <%= link_to 'application form', '#'%> by hand, please carefully read the <%= link_to 'detailed instructions', '#'%>.</p>
+
+<h3><a name="getform"></a>4. How can I obtain a registration form?</h3>
+
+<p>There are two ways to prepare your registration form, online with <strong><%= link_to 'Reggie’s', step1_new_registration_citizens_path %></strong> 
+    help, or by hand:</p>
+<ol><li>Online Form Preparation (preferred)</li>
+<ol><li>Start <%= link_to 'here', step1_new_registration_citizens_path %> to use <strong><%= link_to 'Reggie', step1_new_registration_citizens_path %></strong>, the
+    <%= link_to 'online voter registration assistant', step1_new_registration_citizens_path %> to fill out the form.</li>
+<li>Print your completed Form, so you can sign and mail it.</li></ol>
+<li>Download, Print, and Fill Out by Hand <font color="red">*</font></li>
+<ol><li>Click <%= link_to 'here', '#' %> to download and print the form</li>
+<li>Click <%= link_to 'here', '#' %> to read the simple but complete instructions</li>
+<li>Carefully follow the instructions to fill out the form manually</li>
+</ol>
+</ol>
+
+<p><font color="red">* Note: 	If you choose to fill out your form by hand, Reggie, the online voter registration assistant
+    will not be able to help you track the process of your registration.</font></p>
+
+<h3><a name="mailform"></a>5. Where Do I Mail the Form?</h3>
+<p>After you have printed out the form (either by letting Reggie help or by downloading it yourself), the last step in
+    your registration process is to sign and mail the form.</p>
+
+<ul><li>Signing the form is mandatory – your signature is required to process your registration to vote, and to protect your right to vote.</li></ul>
+
+<p><font color="red">Note: Whether Reggie helped you fill out the form and you printed it, or you downloaded, printed,
+    and filled out the form by hand, the signature is required.</font></p>
+
+<ul><li>Mailing the signed form to your county registrar’s office is your final step and a postage stamp may be required depending on your county.</li></ul>
+
+<p>Here is <%= link_to 'a list of county registrar office addresses', '#' %></p>
+
+
+<p>How effective was this Information?  Please tell us <%= link_to 'here', '#' %></p>
+
+<p>Do you still need help?  Please contact us <%= link_to 'here', '#' %></p>
+
+<p><%= link_to 'Se habla espanol', '#' %></p>

@@ -1,3 +1,7 @@
+body {
+  background: url( /images/background.png ) no-repeat; /* Background Blue */
+}
+
 #yui-main .yui-b {
   background-color: transparent;
 }

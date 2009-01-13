@@ -1,27 +1,42 @@
-<h1>STEP 4: Please approve or reject this registration.</h1>
-<hr>
-<%= render :partial => '/registrations/display' %>
-<img src="/images/form.jpeg">
-<hr>
-<br>
-<br>
-<% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
-  <%= hidden_field :transition, 'approve' %>
-  <%= submit_tag 'Assert Valid Voter Registration Form Received' %>
-<% end %>
-OR:
-<% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "Registration.buildComment()") do %>
-  <%= hidden_field :transition, 'reject' %>
-  Reason for Rejection:
-  <%= select_tag    :reason, options_for_select(['', 'Illegible', 'Incomplete', 'Signature Missing', 'Other'], '') %>
-  <br/>
-  Comment:
-  <%= text_area_tag :text_comment %>
-  <%= hidden_field_tag :comment %>
-  <br/><br/>
-  <%= submit_tag 'Reject Voter Registration Form' %>
+<% content_for :subtitle do %>
+  <h2>Processing Voter Registration Request</h2>
+  <div class="step"><p>Step 4</p></div>
 <% end %>
 
+<h3>Step 4: Please accept or reject this registration application</h3>
+
+<div class="step_4">
+  <div id="scan">
+    <%= image_tag("fake_scan.png") %>
+  </div>
+  <%= render :partial => '/registrations/display' %>
+
+  <div class="yui-g">
+    <div class="yui-u first">
+      <% form_tag(registration_state_transitions_path(@registration), :method => :put, :onSubmit => "Registration.buildComment()") do %>
+        <%= hidden_field :transition, 'reject' %>
+        <p>
+          <%= submit_tag 'Reject Voter Registration Form', :class => "red_button", :style => "width: 296px" %>
+        </p>
+        <p>
+          Reason for Rejection:
+          <%= select_tag    :reason, options_for_select(['', 'Illegible', 'Incomplete', 'Signature Missing', 'Other'], '') %>
+        </p>
+        <p class="textarea_label">
+          Comment:
+        </p>
+        <%= text_area_tag :text_comment %>
+        <%= hidden_field_tag :comment %>
+      <% end %>
+    </div>
+    <div class="yui-u">
+        <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
+          <%= hidden_field :transition, 'approve' %>
+          <%= submit_tag 'Accept Voter Registration Form', :class => "green_button", :style => "width: 300px" %>
+        <% end %>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript">
   Registration = function(){};

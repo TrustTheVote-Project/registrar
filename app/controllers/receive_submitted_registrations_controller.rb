@@ -8,7 +8,7 @@ class ReceiveSubmittedRegistrationsController < ApplicationController
       registration.acting_clerk = current_user
       registration.receive!
     end
-    flash[:notice] = "#{registrations.size} submitted registrations received"
+    flash[:received_count] = registrations.size
     redirect_to(clerk_landing_path)
   end
 

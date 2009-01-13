@@ -1,0 +1,54 @@
+.yui-t2 #yui-main .yui-b {
+  margin-left: 0;
+  padding: 0;
+  font-size: 108%;
+}
+
+div.subtitle {
+  background: #a95543;
+}
+
+div.subtitle h2 {
+  color: black;
+}
+
+.zebra {
+  margin-top: 1em;
+  border: 1px solid #999999;
+  font-size: 87%;
+}
+
+.zebra th, .zebra td {
+  border: none;
+  padding: 4px 8px;
+}
+
+.zebra th {
+  background-color: #c47b68;
+}
+
+.zebra td {
+  vertical-align: top;
+}
+
+.zebra td.citizen {
+  color: #9c361f;
+  font-weight: bold;
+}
+
+.zebra td.event {
+  border-left: 1px solid #999999;
+}
+
+.zebra td.by {
+  border-right: 1px solid #999999;
+}
+
+.zebra td.event h5 {
+  color: #9c361f;
+}
+
+.zebra img {
+  height: 42px;
+  width: 70px;
+}

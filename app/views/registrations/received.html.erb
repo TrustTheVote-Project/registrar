@@ -20,7 +20,7 @@
 
 <div id="after_upload" style="display:none; height: 100px">
   <div>
-    <img src="/images/form.jpeg">
+    <img src="/images/form.png">
 
     <h1>STEP 4: Please approve or reject this registration.</h1>
     <% form_tag(registration_state_transitions_path(@registration), :method => :put) do %>
@@ -36,7 +36,7 @@
         Comment:
         <%= text_area_tag :text_comment %>
         <%= hidden_field_tag :comment %>
-        <br/><br/>
+        <br/><br/> 
         <%= submit_tag 'Reject' %>
     <% end %>
   </div>

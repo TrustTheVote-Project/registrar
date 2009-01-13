@@ -6,6 +6,8 @@
     <%= stylesheet_link_tag 'http://yui.yahooapis.com/2.6.0/build/base/base' %>
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag :defaults %>
+    <%= stylesheet_link_tag 'citizen_landing' %>
+    
     <%= yield :head %>
   </head>
   <body>
@@ -25,12 +27,6 @@
           <div id="box_title"><%= @box_title %></div>
         <% end %>
         <div class="yui-b">
-          <% if flash[:notice] %>
-            <div class="notice"><%= flash[:notice] %></div>
-          <% end %>
-          <% if flash[:error] %>`
-            <div class="error"><%= flash[:error] %></div>
-          <% end %>
           <%= yield %>
         </div>
       </div>

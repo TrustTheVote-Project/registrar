@@ -1,29 +1,30 @@
-<h1>
-  Activity
-</h1>
+<% content_for :subtitle do %>
+  <h2>Audit Log: Voter Registration Request Processing</h2>
+<% end %>
 
-<table cellpadding="5" border="1">
+
+<table class="zebra">
   <tr>
-    <th>Citizen Name</th>
-    <th>Citizen ID Number</th>
-    <th>Registration<br>ID</th>
+    <th>Citizen</th>
+    <th>ID#</th>
+    <th>Trk#</th>
     <th>Scan</th>
     <th>Event</th>
     <th>By</th>
-    <th>Date/Time</th>
+    <th>Date</th>
     <th>Location</th>
-    <th>IP<br>Address</th>
-    <th>Clerk<br>comment</th>
+    <th>IP</th>
+    <th>Comment</th>
   </tr>
 
   <% for activity in @activities %>
-    <tr>
-      <td><%= activity.registration.name %></td>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td class="citizen"><%= activity.registration.name %></td>
       <td><%= activity.registration.id_number%></td>
       <td><%= activity.registration_id %></td>
-      <td><%= image_tag('form.jpeg')%></td>
-      <td><%= activity.message || '&nbsp;'%></td>
-      <td><%= activity.clerk ? "#{activity.clerk.name} (Clerk)" : "#{activity.registration.name} (Registrant)" %></td>
+      <td><%= image_tag('form.png')%></td>
+      <td class="event"><h5><%= activity.status.to_s.capitalize %></h5></td>
+      <td class="by"><%= activity.clerk ? "#{activity.clerk.name} (Clerk)" : "#{activity.registration.name} (Registrant)" %></td>
       <td><%= date_time_display(activity.created_at) %></td>
       <td><%= activity.location || '&nbsp;'%></td>
       <td><%= activity.ip_address || '&nbsp;'%></td>
