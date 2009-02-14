@@ -1,0 +1,20 @@
+<h1>Partner demo</h1>
+
+<p>
+  Text here
+</p>
+
+<p>
+  <div id="register" style="display:none; width: 250px; position: absolute;">
+  </div>
+  <%= link_to_remote(
+      'Register to vote',
+          :url => formatted_new_registration_path(:format =>:js),
+          :method => :get,
+          :complete => visual_effect(:appear, "register", :duration => 1)
+  ) %>
+</p>
+
+<p>
+  More text here
+</p>

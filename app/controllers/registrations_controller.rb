@@ -20,7 +20,10 @@ class RegistrationsController < ApplicationController
 
   def new
     @registration = Registration.new
-    render :layout => 'citizen'
+    respond_to do |format|
+      format.js {}
+      format.html { render :layout => 'citizen' }
+    end
   end
 
   def edit
