@@ -4,16 +4,8 @@
   Text here
 </p>
 
-<p>
-  <div id="register" style="display:none; width: 250px; position: absolute;">
-  </div>
-  <%= link_to_remote(
-      'Register to vote',
-          :url => formatted_new_registration_path(:format =>:js),
-          :method => :get,
-          :complete => visual_effect(:appear, "register", :duration => 1)
-  ) %>
-</p>
+<script src="http://osdv-demo.pivotallabs.com/registrations/new.js"></script>
+<!--<script src="registrations/new.js"></script>-->
 
 <p>
   More text here

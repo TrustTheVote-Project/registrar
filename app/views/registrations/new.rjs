@@ -1,1 +1,2 @@
+page.call 'document.write', '<div id="register"></div>'
 page.replace_html :register, :partial => 'popup'

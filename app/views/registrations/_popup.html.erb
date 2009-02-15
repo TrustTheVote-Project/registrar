@@ -1,7 +1,7 @@
-<div style="border: 1px solid black; background-color: white; color: black">
-  <h1>Register to vote!</h1>
-
-  Hello<br>
+<div id="register_inner" style="display:none; border: 1px solid black; background-color: white; color: black; position: absolute">
+  <h1>OSDV - register to vote!</h1>
+  Hello, this is a popup which would contain the voter registration form<br>
   <br>
-  <%= link_to_function('close', visual_effect(:fade, "register", :duration => 1)) %>
+  <%= link_to_function('close', visual_effect(:fade, "register_inner", :duration => 1)) %>
 </div>
+<%= link_to_function('Register to vote!', visual_effect(:appear, "register_inner", :duration => 1)) %>
