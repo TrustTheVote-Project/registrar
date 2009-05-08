@@ -80,11 +80,11 @@ describe UsersController do
     end
     
     it "should route users's 'update' action correctly" do
-      route_for(:controller => 'users', :action => 'update', :id => '1').should == "/users/1"
+      route_for(:controller => 'users', :action => 'update', :id => '1').should == {:path => "/users/1", :method => :put}
     end
     
     it "should route users's 'destroy' action correctly" do
-      route_for(:controller => 'users', :action => 'destroy', :id => '1').should == "/users/1"
+      route_for(:controller => 'users', :action => 'destroy', :id => '1').should == {:path => "/users/1", :method => :delete}
     end
   end
   
